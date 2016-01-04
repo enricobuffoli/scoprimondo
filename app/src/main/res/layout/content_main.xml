@@ -1,0 +1,29 @@
+
+<com.example.enrico.gestioneimmagini.ImageClasses.CustomView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.enrico.gestioneimmagini.MainActivity" >
+
+    <TextView
+
+       android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <com.example.enrico.gestioneimmagini.ImageClasses.Image
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/abc_action_bar_home_description"
+        android:scaleType="matrix"
+        android:src="@mipmap/ciao" />
+
+</com.example.enrico.gestioneimmagini.ImageClasses.CustomView>

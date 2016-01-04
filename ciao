@@ -1,0 +1,885 @@
+    1  sudo -s
+    2  apt-get install npm
+    3  apt-get install nodejs
+    4  npm install --global gulp
+    5  cd Scrivania/numix-cinnamon-master/
+    6  ls
+    7  cd Numix-Cinnamon/
+    8  ls
+    9  cd cinnamon/
+   10  ls
+   11  npm install
+   12  gulp
+   13  npm install
+   14  gulp
+   15  apt-get remove npm
+   16  npm
+   17  sudo add-apt-repository ppa:numix/ppa && sudo apt-get update && sudo apt-get install numix-plank-theme
+   18  sudo apt-get install -f
+   19  sudo add-apt-repository ppa:numix/ppa && sudo apt-get update && sudo apt-get install numix-plank-theme
+   20  numix
+   21  sudo apt-get install unity-gtk3-module
+   22  sudo add-apt-repository ppa:numix/ppa && sudo apt-get update && sudo apt-get install numix-plank-theme
+   23  sudo apt-get install npm
+   24  cd Scrivania/
+   25  cd numix-cinnamon-master/
+   26  cd Numix-Cinnamon/
+   27  cd cinnamon/
+   28  npm install
+   29  cd Scrivania/
+   30  cd Numix-Cinnamon/
+   31  cd cinnamon/
+   32  npm install
+   33  porco dio
+   34  sudo add-apt-repository ppa:numix/ppa 
+   35  sudo apt-get install numix-plank-theme
+   36  sudo apt-get install numix-plank-theme -f
+   37  sudo apt-get install numix-plank-theme
+   38  sudo apt-get install numix-icon-theme-cricle
+   39  sudo apt-get install numix-icon-theme-circle
+   40  sudo apt-get install numix-dark-theme
+   41  sudo apt-get install numix-theme-dark
+   42  sudo apt-get install numix-gtk-theme
+   43  sudo add-apt-repository ppa:numix/ppa 
+   44  sudo apt-get update
+   45  sudo apt-get install numix-gtk-theme
+   46  history
+   47  dropbox
+   48  sudo apt-get install nautilus-dropbox
+   49  eclipse
+   50  sudo apt-get install eclipse-platform
+   51  codeblocks
+   52  sudo apt-get install codeblocks
+   53  skype
+   54  wine
+   55  sudo lshw > ciao
+   56  ls
+   57  cd Scaricati/
+   58  ls
+   59  sudo dpkg -i skype-ubuntu-precise_4.3.0.37-1_i386.deb 
+   60  > sudo apt-get install mysql-server
+   61  sudo apt-get install mysql-server
+   62  sudo apt-get install apache2 apache2-doc apache2-mpm-prefork apache2-utils libexpat1 ssl-cert
+   63  sudo apt-get install pdftk
+   64  sudo apt-get install git-core gnupg flex bison gperf libsdl-dev libesd0-dev libwxgtk2.6-dev build-essential zip curl libncurses5-dev zlib1g-dev openjdk-6-jdk ant gcc-multilib g++-multilib
+   65  sudo apt-get install git-core gnupg flex bison gperf libsdl-dev libesd0-dev libwxgt build-essential zip curl libncurses5-dev zlib1g-dev openjdk-6-jdk ant gcc-multilib g++-multilib
+   66  sudo apt-get install git-core gnupg flex bison gperf libsdl-dev libesd0-dev libwxgtk2.6-dev build-essential zip curl libncurses5-dev zlib1g-dev openjdk-6-jdk ant gcc-multilib g++-multilib
+   67  sudo apt-get install git-core gnupg flex bison gperf libsdl-dev libesd0-dev libwxgtk2.6-dev build-essential zip curl libncurses5-dev zlib1g-dev openjdk-6-jdk ant gcc-multilib g++-multilib -f
+   68  sudo apt-get install -f
+   69  apache
+   70  apache2.2
+   71  apache2-bin
+   72  sudo apt-get install apache2-bin
+   73  sudo apt-get install g++
+   74  sudo apt-get install git-core gnupg flex bison gperf libsdl-dev libesd0-dev libwxgtk2.6-dev build-essential zip curl libncurses5-dev zlib1g-dev openjdk-6-jdk ant gcc-multilib g++-multilib 
+   75  sudo apt-get install git-core gnupg flex bison gperf libsdl-dev libesd0-dev  build-essential zip curl libncurses5-dev zlib1g-dev openjdk-6-jdk ant gcc-multilib g++-multilib 
+   76  sudo apt-get install apache2 apache2-doc apache2-mpm-prefork apache2-utils libexpat1 ssl-cert
+   77  sudo -s
+   78  apt-get install openjdk-7-jdk
+   79  cd Dropbox/
+   80  cd Enrico/
+   81  cd Computer/
+   82  ls
+   83  dpkg -i master-pdf-editor-3.4.12_i386.deb 
+   84  dpkg -i teamviewer_11.0.52520_i386.deb 
+   85  ls
+   86  dpkg -i google-chrome-stable_current_i386.deb 
+   87  echo deb http://repository.spotify.com testing non-free | sudo tee /etc/apt/sources.list.d/spotify.list 
+   88  sudo apt-get update
+   89  sudo apt-get upgrade
+   90  ls
+   91  cd ..
+   92  ls
+   93  cd Generale/
+   94  ls
+   95  cd ../Computer/
+   96  ls
+   97  echo deb http://repository.spotify.com testing non-free | sudo tee /etc/apt/sources.list.d/spotify.list 
+   98  sudo apt-get update
+   99  spotify-client
+  100  sudo apt-get install spotify-client
+  101  sudo apt-get -f install
+  102  echo deb http://repository.spotify.com testing non-free | sudo tee /etc/apt/sources.list.d/spotify.list 
+  103  sudo apt-get update
+  104  sudo apt-get install spotify-client
+  105  sudo apt-get -f install
+  106  cd Dropbox/
+  107  cd Enrico/
+  108  cd Computer/
+  109  sudo dpkg -i teamviewer_11.0.52520_i386.deb 
+  110  sudo apt-get install gradle
+  111  wine
+  112  sudo add-apt-repository ppa:cairo-dock-team/ppa
+  113  sudo apt-get update
+  114  sudo apt-get install cairo-dock cairo-dock-plug-ins
+  115  sudo apt-get -f install
+  116  spotify
+  117  cd Scaricati/
+  118  ls
+  119  sudo dpkg -i 4kyoutubetomp3_2.11-1_amd64.deb 
+  120  sudo apt-get -f install
+  121  history > ciao
+  122  echo "# LoScoprimondo" >> README.md
+  123  git init
+  124  git add README.md
+  125  git commit -m "first commit"
+  126  git remote add origin https://github.com/enricobuffoli/LoScoprimondo.git
+  127  git push -u origin master
+  128  git config --global user.email "you@example.com"
+  129  git config --global user.email enrico.buffoli1994@gmail.com
+  130  git config --global user.email "you@example.com"git config --global user.name enricobuffoli
+  131  git config --global user.name enricobuffoli
+  132  git push -u origin master
+  133  echo "# LoScoprimondo" >> README.md
+  134  git init
+  135  git add README.md
+  136  git commit -m "first commit"
+  137  git remote add origin https://github.com/enricobuffoli/LoScoprimondo.git
+  138  git push -u origin master
+  139  git --help
+  140  git add
+  141  git add /var/www/LoScoprimondo/
+  142  sudo git add /var/www/LoScoprimondo/
+  143  sudo git add /var/www/LoScoprimondo
+  144  sudo git add -C /var/www/LoScoprimondo/
+  145  sudo git add /var/www/LoScoprimondo/
+  146  cp /var/www/LoScoprimondo/ ./
+  147  cp /var/www/LoScoprimondo/ /home/enrico/
+  148  cp /var/www/LoScoprimondo /home/enrico/
+  149  cp -R /var/www/LoScoprimondo /home/enrico/
+  150  sudo cp -R /var/www/LoScoprimondo /home/enrico/
+  151  sudo git add LoScoprimondo/
+  152  sudo git -c name=LoScoprimondo add LoScoprimondo/
+  153  git init
+  154  git add .
+  155  sudo git add .
+  156  adb
+  157  git init
+  158  ls
+  159  git clone /LoScoprimondo
+  160  cd LoScoprimondo/
+  161  git init
+  162  git add *
+  163  git commit -m "LoScoprimondo"
+  164  git push origin master
+  165  git init
+  166  git push origin master
+  167  sudo git push origin master
+  168  git master
+  169  git --help
+  170  cd ..
+  171  sudo git push origin master
+  172  sudo git push 
+  173  git checkout -b LoScoprimondo
+  174  sudo git push origin LoScoprimondo
+  175  sudo git push LoScoprimondo
+  176  cd workspace/
+  177  ls
+  178  cd ..
+  179  ls
+  180  cd Sc
+  181  cd Scaricati/
+  182  ls
+  183  git init
+  184  git add zetman-4315087.jpg 
+  185  git commit -m prova
+  186  git push origin LoScoprimondo
+  187  cd ..
+  188  git push origin LoScoprimondo
+  189  git init
+  190  git add /LoScoprimondo/*
+  191  ls
+  192  git add *
+  193  sudo git add
+  194  sudo git add *
+  195  sudo git add LoScoprimondo/
+  196  cd ..
+  197  cd .git
+  198  cd /.git
+  199  ls -a
+  200  cd enrico/
+  201  ls -a
+  202  cd .git/
+  203  ls
+  204  rm index.lock +
+  205  sudo rm index.lock +
+  206  sudo rm -R index.lock +
+  207  rm --hlp
+  208  rm --help
+  209  sudo rm -f index.lock +
+  210  ls
+  211  cd ..
+  212  sudo git add LoScoprimondo/
+  213  ls
+  214  sudo git commit -m "LoScoprimondo"
+  215  sudo git push origin LoScoprimondo
+  216  git add remote origin chronus.ing.unibs.it
+  217  ls
+  218  ls -a
+  219  la
+  220  ciao alias ls
+  221  ciso
+  222  sudo
+  223  ll
+  224  ll-a
+  225  <'
+  226  <
+  227  c
+  228  ciao alias ls
+  229  ls alias ciao
+  230  alias?
+  231  ?
+  232  ll -a
+  233  ls --help
+  234  ls -h
+  235  cd ciao
+  236  ciao
+  237  --help
+  238  help
+  239  help alias
+  240  alias --help
+  241  alias: ciao=ls
+  242  alias ciao=ls
+  243  ciao
+  244  alias ls=ciao
+  245  ciao
+  246  ls
+  247  cd Scrivania/
+  248  rpm -i jre-8u66-linux-i586.rpm 
+  249  sudo apt-get install rpm
+  250  cd Scrivania/
+  251  chmod +x JOdin3CASUAL-r1017-dist.jar 
+  252  jdk8
+  253  apt-get install openjdk-8-jdk
+  254  sudo apt-get install openjdk-8-jdk
+  255  cd Scrivania/
+  256  ls
+  257  tar zxvf jre-8u66-linux-i586.tar.gz 
+  258  sudo add-apt-repository ppa:openjdk-r/ppa
+  259  sudo apt-get update
+  260  sudo apt-get install openjdk-8-jdk
+  261  java
+  262  java -version
+  263  java update
+  264  java --help
+  265  java 
+  266  jdk
+  267  java -version
+  268  sudo apt-get purge openjdk*
+  269  sudo add-apt-repository ppa:webupd8team/java
+  270  sudo apt-get update
+  271  sudo apt-get install oracle-java8-installer
+  272  java -version
+  273  gradle
+  274  sudo apt-get install gradle
+  275  eclipse
+  276  sudo apt-get install eclipse-platform
+  277  sdb
+  278  adb
+  279  ruby
+  280  ferret-vis
+  281  cd Scaricati/
+  282  sudo dpkg -i heimdall_1.3.1_amd64.deb 
+  283  sudo dpkg -i -f heimdall_1.3.1_amd64.deb 
+  284  sudo apt-get install -f
+  285  sudo dpkg -r heimdall_1.3.1_amd64.deb 
+  286  dpkg --help
+  287  sudo dpkg -r heimdall_1.3.1_amd64.deb 
+  288  sudo dpkg -i heimdall_1.3.1_amd64.deb 
+  289  heimdall
+  290  heimdall-frontend
+  291  sudo apt-get install heimdall-flash-frontend
+  292  heimdall-frontend
+  293  sudo heimdall-frontend
+  294  cd Scr
+  295  cd ..
+  296  cd Scrivania/
+  297  cd Cellulare/
+  298  ls
+  299  ls -a
+  300  cd .apk/
+  301  ls
+  302  sudo dpkg -r heimdall_1.3.1_amd64.deb 
+  303  sudo dpkg -r -f heimdall_1.3.1_amd64.deb 
+  304  cd /home/enrico/Scaricati/
+  305  ls
+  306  sudo dpkg -r -f heimdall_1.3.1_amd64.deb 
+  307  sudo dpkg -r heimdall_1.3.1_amd64.deb 
+  308  dpkg --help
+  309  sudo dpkg -r heimdall
+  310  heidmall
+  311  sudo dpkg -r heimdall
+  312  sudo dpkg -i heimdall_1.3.1_amd64.deb 
+  313  heidmall-flash
+  314  heimdall-flash
+  315  sudo apt-get install -f
+  316  sudo dpkg -r heimdall
+  317  heimdall-flash
+  318  sudo apt-get remove heimdall-flash
+  319  sudo dpkg -r heimdall
+  320  sudo dpkg -r heimdall-flash
+  321  sudo apt-get install -f
+  322  sudo dpkg -i heimdall_1.3.1_amd64.deb 
+  323  cd Scaricati/
+  324  sudo dpkg -i heimdall_1.3.1_amd64.deb 
+  325  heimdall
+  326  sudo dpkg -r heimdall
+  327  sudo apt-get install heimdall-flash
+  328  heimdall-flash
+  329  heimdall
+  330  sudo dpkg -r heimdall
+  331  heimdall
+  332  heimdall-flash
+  333  heimdall -o
+  334  heimdall -flash
+  335  heimdall flash
+  336  heimdall -detect
+  337  heimdall detect
+  338  heimdall flash
+  339  heimdall detect
+  340  sudo heimdall
+  341  sudo heimdall detect
+  342  heimdall info
+  343  heimdall detect --verbose --usb-log-level debug
+  344  heimdall print-pit --verbose
+  345  heimdall download-pit --output i9000.pit --verbose --no-reboot
+  346  sudo adb reboot download
+  347  sudo adb reboot
+  348  sudo adb 
+  349  adb -p
+  350  sudo adb reboot download
+  351  sudo adb reboot 
+  352  adb upgrade
+  353  sudo adb reboot download
+  354  heimdall download-pit --output i9000.pit --verbose --no-reboot
+  355  heimdall detect --verbose --usb-log-level debug
+  356  sudo adb reboot download
+  357  heimdall detect --verbose --usb-log-level debug
+  358  sudo adb reboot download
+  359  heimdall detect --verbose --usb-log-level debug
+  360  sudo adb reboot download
+  361  heimdall detect --verbose --usb-log-level debug
+  362  heimdall detect 
+  363  sudo adb reboot 
+  364  sudo adb reboot download
+  365  sudo adb device
+  366  heimdall detect 
+  367  sudo adb reboot download
+  368  sudo adb reboot 
+  369  nano ~/.bashrc 
+  370  adb devices
+  371  cd Scrivania/
+  372  tar -xvzf android-sdk_rXX-linux.tgz && mv android-sdk-linux ~/
+  373  tar -xvzf android-sdk_r24.4.1-linux.tgz && mv android-sdk-linux ~/
+  374  gksudo gedit /etc/udev/rules.d/51-android.rules
+  375  heimdall detect 
+  376  sudo adb reboot 
+  377  heimdall detect 
+  378  sudo adb reboot 
+  379  adb devices
+  380  heimdall detect 
+  381  adb devices
+  382  sudo adb reboot 
+  383  heimdall detect 
+  384  adb devices
+  385  heidmall devices
+  386  heimdall devices
+  387  adb devices
+  388  adb flash
+  389  fastboot
+  390  sudo apt-get install android-tools-fastboot
+  391  sudo apt-get install android-tools-fastboot<<
+  392  fastboot erase laf
+  393  fastboot reboot
+  394  sudo adb reboot 
+  395  sudo fastboot reboot
+  396  sudo adb reboot 
+  397  sudo fastboot reboot
+  398  sudo fastboot 
+  399  heimdall devices
+  400  heimdall detect 
+  401  sudo adb reboot 
+  402  sudo apt-get install -f
+  403  adb devices
+  404  adb reboot
+  405  adb devices
+  406  adb reboot oem-unlock
+  407  sudo apt-get remove heimdall-flash
+  408  sudo apt-get remove heimdall
+  409  heimdall-flash
+  410  heimdall
+  411  hystory >ciao
+  412  hystori >ciao
+  413  history >ciao
+  414  sudo dpkg -r heimdall
+  415  sudo apt-get remove heimdall-flash-frontend
+  416  sudo lshw > car_pc
+  417  cd Scrivania/
+  418  sudo tar jxvf 0003-r8101-1.028.00.tar.bz2 
+  419  cd r8101-1.028.00/
+  420  ./autorun.sh
+  421  sudo ./autorun.sh
+  422  lsmod | grep r8101
+  423  ifconfig -a
+  424  cd Scrivania/
+  425  cd Auser-Erbusco/
+  426  pdftk guida_facebook.pdf titolo.pdf output guida_su_facebook.pdf
+  427  cd Scrivania/ù
+  428  cd Scrivania/
+  429  cd Auser-Erbusco/
+  430  pdftk titolo.pdf guida_facebook.pdf  output guida_su_facebook.pdf
+  431  cd Scrivania/
+  432  cd Auser-Erbusco/
+  433  cd Twitter/
+  434  cd Corpo/
+  435  ls
+  436  pdftk titolo.pdf twitter.pdf output introduzione_a_twitter.pdf
+  437  cd Scrivania/
+  438  cd Auser-Erbusco/
+  439  cd Spotify/
+  440  cd Corpo/
+  441  pdftk titolo.pdf spotify.pdf output introduzione_a_spotify.pdf
+  442  cd Scrivania/
+  443  cd Spotify/
+  444  cd Auser-Erbusco/
+  445  cd Spotify/
+  446  cd Corpo/
+  447  pdftk titolo.pdf spotify.pdf output introduzione_a_spotify.pdf
+  448  cd/usr/share/doc/apache2/
+  449  cd/usr/share/doc/apache2
+  450  cd /usr/share/doc/apache2
+  451  LS
+  452  ls
+  453  gedit README.Debian.gz 
+  454  /usr/bin/apache2
+  455  cd /usr/bin/apache2/
+  456  cd /usr/bin/apache2
+  457  cd /usr/bin/
+  458  ls
+  459  gedit apache2
+  460  ls -a
+  461  ls -a apache
+  462  ls apache
+  463  ls apache -a
+  464  apache ls -a
+  465  apache2ctl
+  466  apache2ctl restart
+  467  sudo apache2ctl restart
+  468  sudo apache2ctl -h
+  469  sudo apache2 -k start
+  470  sudo apache2  start
+  471  sudo apache2  -k restart
+  472  sudo apache2ctl -d
+  473  sudo apache2ctl -d directory
+  474  sudo apache2ctl -d /var/www/
+  475  sudo apache2ctl -d var/www/
+  476  sudo apache2ctl -d /var/www
+  477  sudo apache2ctl -h
+  478  sudo apache2 -d /var/www/
+  479  sudo apache2 -D localhost
+  480  sudo apache2 -D 127.0.0.1
+  481  cd /var/
+  482  ls
+  483  ls -a
+  484  cd www/
+  485  ls
+  486  ls -all
+  487  cd /etc/apache2/
+  488  ls
+  489  gedit apache2.conf 
+  490  apache2 -l
+  491  sudo nano /etc/apache2/sites-available/default
+  492  sudo a2ensite localhost
+  493  sudo a2ensite 127.0.0.1
+  494  sudo service apache2 reload
+  495  adb devices
+  496  adb
+  497  adb devices
+  498  adb restart
+  499  adb reboot
+  500  adb devices
+  501  sudo tar jxvf 0003-r8101-1.028.00.tar.bz2 
+  502  tar -xvzf Scaricati/android-sdk_r24.4.1-linux.tgz 
+  503  cd Scaricati/
+  504  ls
+  505  cd Scrivania/
+  506  cd android-studio/
+  507  cd bin/
+  508  ./studio.sh 
+  509  cd Scaricati/
+  510  cd ..
+  511  cd Scrivania/
+  512  cd android-studio/
+  513  ls
+  514  cd bin/
+  515  ls
+  516  ./studio.sh 
+  517  cd ~/.AndroidStudio1.5
+  518  ls
+  519  cd system/
+  520  ls
+  521  cd --
+  522  cd ~/.AndroidStudio1.5
+  523  sudo apt-add-repository ppa:paolorotolo/android-studio 
+  524  sudo apt-get update 
+  525  sudo apt-get install android-studio
+  526  android-studio
+  527  android
+  528  androidstudio
+  529  android-studio
+  530  sudo apt-get install android-studio+
+  531  android-studio
+  532  sudo apt-get remove apache2
+  533  sudo apt-get install apache2 apache2-doc apache2-mpm-prefork apache2-utils libexpat1 ssl-cert
+  534  sudo firefox
+  535  apache2ctl configtest
+  536  127.0.0.1
+  537  127.0.0.1.
+  538  sudo nano /etc/apache2/httpd.conf
+  539  xampp
+  540  sudo apt-get remove xampp
+  541  apache
+  542  apache2
+  543  apache2 --help
+  544  apache2-bin+
+  545  apache2-bin
+  546  apache2
+  547  sudo nano /etc/apache2/apache2.conf
+  548  sudo nano /etc/apache2/envvars 
+  549  sudo apt-get install binutils cpp gcc make automake autoconf debhelper g++ build-essential
+  550  sudo apt-get install apache2 apache2-doc apache2-mpm-prefork apache2-utils libexpat1 ssl-cert
+  551  sudo apt-get install -f
+  552  apache2 restart
+  553  apache2 -k restart
+  554  apache2 --help
+  555  apache2ctl
+  556  apache2ctl -h
+  557  apache2ctl -D
+  558  cd /var/
+  559  cd www/
+  560  cd html/
+  561  ls
+  562  ls -a
+  563  ls -all
+  564  chmod 0600 LoScoprimondo/
+  565  sudo chmod 0600 LoScoprimondo/
+  566  apach2 -k restart
+  567  apache2 -k restart
+  568  apache2ctl restart
+  569  sudo apache2ctl restart
+  570  sudo apache2ctl $ServerName
+  571  sudo apache2ctl ServerName
+  572  sudo apache2ctl -k restart
+  573  sudo apache2ctl -k start
+  574  sudo apache2ctl -k stop
+  575  fuck
+  576  sudo apt-get remove -f apache2 apache2-doc apache2-mpm-prefork apache2-utils libexpat1 ssl-cert
+  577  sudo apt-get remove apache2 apache2-doc apache2-mpm-prefork apache2-utils libexpat1 ssl-cert
+  578  sudo apt-get remove -f
+  579  sudo apt-get remove apache2 apache2-doc apache2-mpm-prefork apache2-utils libexpat1 ssl-cert
+  580  sudo apt-get remove apache
+  581  sudo apt-get remove apache2
+  582  sudo apt-get remove apache2.2
+  583  sudo apt-get autoremove
+  584  sudo apt-get install apach2
+  585  sudo apt-get install apache2
+  586  gedit </etc/apache2/sites-available/default
+  587  gedit /etc/apache2/sites-available/default
+  588  cd /etc/hostname
+  589  /etc/hostname
+  590  sudo /etc/hostname
+  591  sudo gedit /etc/hostname
+  592  cd /var/
+  593  cd www/
+  594  cd html/
+  595  rm -R index.html 
+  596  ls
+  597  rm -R index.html 
+  598  sudo rm -R index.html 
+  599  ls
+  600  cd ..
+  601  ls
+  602  apache2ctl -k restart
+  603  sudo apache2ctl -k restart
+  604  sudo apache2ctl stop
+  605  sudo apache2ctl start
+  606  sudo .s
+  607  sudo -s
+  608  cd e
+  609  cd /etc/apache2/
+  610  gedit apache2.conf 
+  611  sudo apache2ctl start
+  612  sudo apache2ctl -k restart
+  613  sudo apache2ctl start
+  614  sudo apache2ctl stop
+  615  sudo apache2ctl start
+  616  javascript
+  617  js
+  618  php
+  619  sudo apt-get install apache2 apache2-doc apache2-mpm-prefork apache2-utils libexpat1 ssl-cert
+  620  php
+  621  sudo apt-get install php5-cli
+  622  php
+  623  cd Android/
+  624  LS
+  625  ls
+  626  cd ..
+  627  ls
+  628  cd StudioProjects/
+  629  ls
+  630  cd Immagine/
+  631  ls
+  632  ./gradlew assembleDebug
+  633  mysql
+  634  mysql -u
+  635  mysql -u 
+  636  mysql -u  root
+  637  cd --
+  638  cd Dropbox/
+  639  cd Progetto\ Android/
+  640  cd APP-Buffoli/
+  641  cd LoScoprimondo/
+  642  ls
+  643  cd -
+  644  cd --
+  645  cd
+  646  cd-
+  647  cd -
+  648  cd Scrivania/
+  649  mysql -u  root
+  650  cd /bin/
+  651  ls
+  652  ls jdk
+  653  cd j
+  654  ls j*
+  655  cd ..
+  656  cd StudioProjects/
+  657  cd Immagine/
+  658  ./gradlew assembleDebug
+  659  ./gsudo radlew assembleDebug
+  660  sudo ./gradlew assembleDebug
+  661  sudo ./gradlew assembleDebug --debug
+  662  gradle -d
+  663  cd ..
+  664  ls -all
+  665  cd ..
+  666  ls
+  667  find java
+  668  $JAVA_HOME="usr/lib/jvm/java-8-oracle/"
+  669  $JAVA_HOME="/usr/lib/jvm/java-8-oracle/"
+  670  $JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+  671  sudo $JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+  672  set $JAVA_HOME="/usr/lib/jvm/java-8-oracle/"
+  673  cd home/
+  674  cd enrico/
+  675  cd StudioProjects/
+  676  cd Immagine/
+  677  gradle -d
+  678  set $JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+  679  gradle -d
+  680  sudo ./gradlew assembleDebug --debug
+  681  gradle -d
+  682  gradle 
+  683  set $JAVA_HOME="/usr/lib/jvm"
+  684  gradle 
+  685  set $JAVA_HOME="/usr/lib/jvm/java-8-oracle/"
+  686  ls
+  687  gradle --help
+  688  sudo apt-get remove gradle
+  689  sudo apt-get autoremove
+  690  sudo apt-get install gradle
+  691  gradle --help
+  692  set $JAVA_HOME="/usr/lib/jv"
+  693  gradle --help
+  694  gradle -d
+  695  sudo ./gradlew assembleDebug --debug
+  696  gradle --he
+  697  gradle
+  698  set JAVA_HOME="/usr/lib/jvm/java-8-oracle/"
+  699  ls
+  700  gradle
+  701  set $JAVA_HOME=/usr/lib/jvm/java-8-oracle/
+  702  gradle
+  703  set $JAVA_HOME=usr/lib/jvm/java-8-oracle/
+  704  gradle
+  705  set $JAVA_HOME=/usr/lib/jvm/java-8-oracle
+  706  gradle
+  707  gradle set
+  708  cd /usr/jdk/
+  709  cd /usr/
+  710  ls
+  711  cd lib
+  712  ls
+  713  cd jdk
+  714  cd 
+  715  cd /usr
+  716  ls
+  717  cd bin/
+  718  la
+  719  jdk
+  720  sudo apt-get install openjdk-7-jdk
+  721  cd ..
+  722  cd lib
+  723  ls
+  724  cd jvm/
+  725  ls
+  726  cd java-8-oracle/
+  727  ls
+  728  cd jre/
+  729  ls
+  730  cd bin/
+  731  ls
+  732  set $JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre/bin/java
+  733  ls
+  734  gradle
+  735  set $JAVA_HOME="/usr/lib/jvm/java-8-oracle/jre/bin/java"
+  736  cd --
+  737  cd StudioProjects/
+  738  cd Immagine/
+  739  gradle
+  740  set $JAVA_HOME="/usr/lib/jvm/java-8-oracle/jre/bin/java"
+  741  gradle -d
+  742  which java
+  743  whereis java
+  744  echo $JAVA_HOME
+  745  set $JAVA_HOME="/usr/bin/java"
+  746  echo $JAVA_HOME
+  747  sudo set $JAVA_HOME="/usr/bin/java"
+  748  sudo  $JAVA_HOME="/usr/bin/java"
+  749  cd /usr/
+  750  ls
+  751  cd bin/
+  752  ls
+  753  ls java
+  754  ls j
+  755  ls j*
+  756  export $JAVA_HOME=/usr/bin/java
+  757  export $JAVA_HOME="/usr/bin/java"
+  758  export JAVA_HOME="/usr/bin/java"
+  759  export PATH=$PATH:/usr/bin
+  760  echo $JAVA_HOME
+  761  vi ~/.bash_profile
+  762  sudo -s
+  763  vi ~/.bash_profile.swp
+  764  vi ~/.bash_profile.swo
+  765  vi ~/.bash_profile
+  766  whereis jdk
+  767  which jdk
+  768  vi ~/.
+  769  vi ~/.bashrc
+  770  gedit ~/.bashrc
+  771  cd /usr/lib/jvm/
+  772  ls
+  773  cd java-8-oracle/
+  774  ls
+  775  cd bin/
+  776  ls
+  777  gradle
+  778  gradleù
+  779  gradle
+  780  gradle
+  781  whereis java
+  782  gedit ~/.bashrc
+  783  gradle
+  784  which java
+  785  whereis java
+  786  whoami
+  787  whoami f
+  788  whoami
+  789  echo $JAVA_HOME
+  790  echo java
+  791  readlink -f $(which java)
+  792  gedit ~/.bashrc
+  793  gradle
+  794  readlink -f $(which java)
+  795  cd >/usr/lib/jvm/
+  796  cd /usr/lib/jvm/
+  797  la
+  798  ls
+  799  cd java-8-oracle/
+  800  òs
+  801  ls
+  802  cd jre
+  803  ls
+  804  cd bin/
+  805  ls
+  806  gedit ~/.bashrcù
+  807  gedit ~/.bashrc
+  808  echo $JAVA_HOME
+  809  gradle
+  810  readlink -f $(which java)
+  811  gedit ~/.bashrc
+  812  gradle
+  813  gedit ~/.bashrc
+  814  exit
+  815  gradle
+  816  gedit ~/.bashrc
+  817  gradle
+  818  cd StudioProjects/
+  819  cd Immagine/
+  820  ls
+  821  gradle -d
+  822  sudo gradle -d
+  823  sudo gedit ~/.bashrc
+  824  sudo gradle -d
+  825  sudo gedit /.bashrc
+  826  ./gradlew assembleDebug
+  827  sudo ./gradlew assembleDebug
+  828  cd ..
+  829  cd Immagine/
+  830  sudo ./gradlew assembleDebug
+  831  sudo ./gradlew assembleDebug --debug
+  832  cd StudioProjects/Immagine/
+  833  sudo ./gradlew assembleDebug --debug
+  834  history > ciao
+  835  sudo apt-get install -f
+  836  sudo apt-get update
+  837  sudo apt-get install -f
+  838  sudo apt-get install --help
+  839  sudo apt-get purge
+  840  sudo apt-get dist-upgrade
+  841  sudo apt-get autoclean
+  842  sudo apt-get upgrade
+  843  sudo apt-get install -f
+  844  sudo apt-get clean
+  845  sudo apt-get check
+  846  sudo apt-get check >ciao
+  847  apt --installed list
+  848  apt-get --installed list
+  849  apt --help
+  850  get
+  851  apt-get
+  852  sudo dpkg -l | more
+  853  cat /var/log/dpkg.log | grep " install "cat /var/log/dpkg.log | grep " install "cat /var/log/dpkg.log | grep " install "cat /var/log/dpkg.log | grep " install "cat /var/log/dpkg.log | grep " install "cat /var/log/dpkg.log | grep " install "cat /var/log/dpkg.log | grep " install "
+  854  cat /var/log/dpkg.log | grep " install "
+  855  cat /var/log/dpkg.log | grep " install "cat /var/log/dpkg.log | grep " install "
+  856  cat /var/log/dpkg.log | grep " install "
+  857  cat /var/log/dpkg.log | grep " install "> installed_packages
+  858  apt-cache pkgnames
+  859  apt-cache pkgnames > installed_packages
+  860  cd Scrivania/
+  861  history
+  862  history > ciao
+  863  cd GestioneImmagini/
+  864  git add.
+  865  git add .
+  866  git init
+  867  git add .
+  868  git commit -m "prova"
+  869  git push mattiamerlini/scoprimondo
+  870  git push scoprimondo
+  871  git push master
+  872  git push
+  873  git remote add origin https://github.com/mattiamerlini/scoprimondo.git
+  874  git push 
+  875  git push -u origin master
+  876  git checkout -b scoprimondo
+  877  git push -u origin scoprimondo
+  878  git checkout -b scoprimondo
+  879  git checkout -b master
+  880  git checkout  master
+  881  git push -u origin master
+  882  git checkout  scoprimondo
+  883  git checkout  LoScopirmondo
+  884  git checkout  LoScoprimondo
+  885  history > ciao
