@@ -1,0 +1,5 @@
+<root>
+  <item name='android.content.ContextWrapper java.io.File getFilesDir()'>
+    <annotation name='java.lang.annotation.Deprecated' />
+  </item>
+</root>
