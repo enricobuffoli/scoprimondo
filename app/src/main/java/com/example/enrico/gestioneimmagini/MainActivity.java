@@ -1,60 +1,49 @@
 package com.example.enrico.gestioneimmagini;
 
-import com.example.enrico.gestioneimmagini.ImageClasses.*;
-
+import android.app.Activity;
+import android.app.TabActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-
 import android.view.Menu;
 import android.view.MenuItem;
-
-
 import android.widget.*;
-import android.util.*;
+import com.example.enrico.gestioneimmagini.LayoutGestures.*;
+import com.example.enrico.gestioneimmagini.LayoutGestures.ImageMotionView;
 
-public class MainActivity extends AppCompatActivity {
-
-        private TextView t;
-        int drawable;
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.content_main);
-            CustomView myView =(CustomView) findViewById(R.id.parent_view);
-            Image view1 = (Image) findViewById(R.id.imageView1);
-            //myView.addImage(view1);
-            //Image view2 = (Image) findViewById(R.id.imageView2);
-
-
-
-            t=(TextView) findViewById(R.id.textView1);
-
-
-        }
-
-
-
-
-
+public class MainActivity extends Activity
+{
+    /** Called when the activity is first created. */
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+    public void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        ButtonGestureView prova =(ButtonGestureView) findViewById(R.id.button_gesture);
+        prova.init();
+        prova.addImage(R.mipmap.ciao);
+        prova.addImage(R.mipmap.ciao2);
+/*
+        // create the TabHost that will contain the Tabs
+        TabHost tabHost = (TabHost)findViewById(android.R.id.tabhost);
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        TabHost.TabSpec tab1 = tabHost.newTabSpec("First Tab");
+        TabHost.TabSpec tab2 = tabHost.newTabSpec("Second Tab");
+        TabHost.TabSpec tab3 = tabHost.newTabSpec("Third tab");
 
-        return super.onOptionsItemSelected(item);
+        // Set the Tab name and Activity
+        // that will be opened when particular Tab will be selected
+        tab1.setIndicator("Tab1");
+        tab1.setContent(new Intent(this, ScoprimondoTabActivity.class));
+
+        tab2.setIndicator("Tab2");
+
+        tab3.setIndicator("Tab3");
+
+        tabHost.addTab(tab1);
+        tabHost.addTab(tab2);
+        tabHost.addTab(tab3);
+*/
     }
 }

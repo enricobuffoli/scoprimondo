@@ -883,3 +883,82 @@
   883  git checkout  LoScopirmondo
   884  git checkout  LoScoprimondo
   885  history > ciao
+  886  cd ..
+  887  history > ciao
+  888  ls
+  889  git init
+  890  git add ciao
+  891  git commit -m "prova2"
+  892  git checkout LoScoprimondo
+  893  git remote add origin https://github.com/enricobuffoli/LoScoprimondo.git
+  894  git checkout LoScoprimondo
+  895  git checkout merlini-branch
+  896  git checkout -b LoScoprimondo
+  897  git checkout --help
+  898  git checkout LoScoprimondo
+  899  git push -u origin LoScoprimondo
+  900  git remote add origin https://github.com/enricobuffoli/LoScoprimondo.git
+  901  git remote add origin https://github.com/mattiamerlini/scoprimondo.git
+  902  git checkout LoScoprimondo
+  903  git push -u origin LoScoprimondo
+  904  git push  LoScoprimondo
+  905  git push -u  LoScoprimondo
+  906  git add remote --help
+  907  git checkout scoprimondo
+  908  git remove --help
+  909  git rem --help
+  910  git remote remove origin
+  911  git remote -v 
+  912  git remote add android_app https://github.com/mattiamerlini/scoprimondo.git
+  913  git remote add web_app https://github.com/enricobuffoli/LoScoprimondo.git
+  914  git checkout scoprimondo
+  915  git checkout android_app scoprimondo
+  916  git push -u android_app scoprimondo
+  917  git checkout scoprimondo
+  918  git checkout --help
+  919  git init
+  920  git add ciao 
+  921  git checkout scoprimondo
+  922  git checkout mattiamerlini/scoprimondo
+  923  git checkout android_app
+  924  git checkout 
+  925  git push -u web_
+  926  git pull -u web_app LoScoprimondo
+  927  cd LoScoprimondo/
+  928  git init
+  929  git pull -u web_app LoScoprimondo
+  930  git remote add web_app https://github.com/enricobuffoli/LoScoprimondo.git
+  931  git pull -u web_app LoScoprimondo
+  932  git add ciao 
+  933  git pull -u web_app LoScoprimondo
+  934  git push -u web_app LoScoprimondo
+  935  git checkout LoScoprimondo 
+  936  git push -u web_app LoScoprimondo
+  937  git add .
+  938  git commit -m "ciao"
+  939  git push -u web_app LoScoprimondo
+  940  git push  web_app LoScoprimondo
+  941  git init
+  942  git add.
+  943  git add .
+  944  git commit -m "ciao"
+  945  git add .
+  946  git commit -m "ciao"
+  947  git push  web_app LoScoprimondo
+  948  git checkout LoScoprimondo 
+  949  git checkout -b  LoScoprimondo 
+  950  git push  web_app LoScoprimondo
+  951  git status
+  952  history > ciao
+  953  cd ..
+  954  history > ciao
+  955  cd Scrivania/
+  956  cd GestioneImmagini/
+  957  git init
+  958  git remote add android_app https://github.com/mattiamerlini/scoprimondo.git
+  959  git checkout -b scoprimondo
+  960  git commit -m "prova2"
+  961  git add .
+  962  git commit -m "prova2"
+  963  git push android_app scoprimondo
+  964  history > ciao
