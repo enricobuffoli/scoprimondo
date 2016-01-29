@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.enrico.mvc_scoprimondo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="it.enricobuffoli.mvc_scoprimondo.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="it.mattiamerlini.mvc_scoprimondo.Activities.Login.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="it.mattiamerlini.mvc_scoprimondo.Activities.Menu.MenuActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
+            <!-- android:parentActivityName=".LoginActivity" -->
+
+        </activity>
+        <activity
+            android:name="it.mattiamerlini.mvc_scoprimondo.Activities.TestGioca.TestGiocaActivity"
+            android:parentActivityName="it.mattiamerlini.mvc_scoprimondo.Activities.Menu.MenuActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity android:name="it.mattiamerlini.mvc_scoprimondo.Activities.Registration.RegistrationActivity"
+            android:parentActivityName="it.mattiamerlini.mvc_scoprimondo.Activities.Registration.RegistrationActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+    </application>
+
+</manifest>
