@@ -33,10 +33,6 @@
             <!-- android:parentActivityName=".LoginActivity" -->
 
         </activity>
-        <activity
-            android:name="it.mattiamerlini.mvc_scoprimondo.Activities.TestGioca.TestGiocaActivity"
-            android:parentActivityName="it.mattiamerlini.mvc_scoprimondo.Activities.Menu.MenuActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
         <activity android:name="it.mattiamerlini.mvc_scoprimondo.Activities.Registration.RegistrationActivity"
             android:parentActivityName="it.mattiamerlini.mvc_scoprimondo.Activities.Registration.RegistrationActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
