@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true"
     tools:context="com.example.enrico.gestioneimmagini.MainActivity">
 
-    <TabHost
+    <it.mattiamerlini.mvc_scoprimondo.Views.Impl.TabHostImpl
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/tabHost">
@@ -98,5 +98,5 @@
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>
-    </TabHost>
+    </it.mattiamerlini.mvc_scoprimondo.Views.Impl.TabHostImpl>
 </RelativeLayout>

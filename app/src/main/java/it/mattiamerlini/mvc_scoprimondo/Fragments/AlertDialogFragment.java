@@ -5,10 +5,11 @@ package it.mattiamerlini.mvc_scoprimondo.Fragments;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
+
 
 import com.example.enrico.mvc_scoprimondo.R;
 

@@ -1,27 +1,21 @@
 package it.enricobuffoli.mvc_scoprimondo;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-import android.widget.TabHost;
+import android.view.View;
+
 import android.widget.TabHost.*;
-import android.widget.TabWidget;
 
 import it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView;
-import it.mattiamerlini.mvc_scoprimondo.Activities.Menu.MenuActivity;
-import it.mattiamerlini.mvc_scoprimondo.Fragments.AlertDialogFragment;
-import it.mattiamerlini.mvc_scoprimondo.Utilities.ActivityUtility;
+import it.mattiamerlini.mvc_scoprimondo.Views.Impl.TabHostImpl;
+
 
 import com.example.enrico.mvc_scoprimondo.R;
 
 public class MainActivity extends AppCompatActivity
 {
-    private TabHost tabHost;
+    private TabHostImpl tabHost;
     private String tab1 = "tab1";
     private String tab2 = "tab2";
     private String tab3 = "tab3";
@@ -43,8 +37,8 @@ public class MainActivity extends AppCompatActivity
         buttonGestureView.init();
 
         //Retrieve elements
-        this.tabHost = (TabHost) findViewById(R.id.tabHost);
-        this.tabHost.setup();
+        this.tabHost = (TabHostImpl) findViewById(R.id.tabHost);
+        this.tabHost.setup(this);
 
         this.tabHost.setBackground(ContextCompat.getDrawable(this.getApplicationContext(), R.drawable.sfondo));
 
@@ -80,52 +74,32 @@ public class MainActivity extends AppCompatActivity
         spec.setContent(R.id.tab6);
         this.tabHost.addTab(spec);
 
-        this.tabHost.setCurrentTabByTag(this.tab2);
+        this.tabHost.setCurrentTab(1);
 
-        this.tabHost.setOnTabChangedListener(new OnTabChangeListener() {
-            @Override
-            public void onTabChanged(String tabId) {
-                //Maintain current e previus tab
-                prePreviusTab = previusTab;
-                previusTab = currentTab;
-                currentTab = tabId;
 
-                if(tab1.equals(tabId))
+                /*
+                if(current.equals(tab2))
                 {
-
-                    tabHost.setCurrentTabByTag(tab2);
-                    AlertDialogFragment dialog = new AlertDialogFragment("Attenzione" + previusTab, "Sei sicuro di voler abbandonare?\nI dati andranno persi.", "Sì, abbandona!", "No, resta qui!") {
-                        @Override
-                        protected void onNegativeClick(DialogInterface dialog, int which) {
-
-                        }
-
-                        @Override
-                        protected void onPositiveClick(DialogInterface dialog, int which) {
-                            ActivityUtility.changeActivity(getApplicationContext(), MenuActivity.class, null);
-                        }
-                    };
-                    dialog.show(getSupportFragmentManager(), "alert");
-                }
-                if(tab2.equals(tabId))
-                {
-                    if(tab1.equals(previusTab))
+                    if(clicked.equals(tab1))
                     {
-                        previusTab = prePreviusTab;
+                        //Exit the game
+                        AlertDialogFragment dialog = new AlertDialogFragment("Attenzione", "Sei sicuro di voler abbandonare?\nI dati andranno persi.", "Sì, abbandona!", "No, resta qui!") {
+                            @Override
+                            protected void onNegativeClick(DialogInterface dialog, int which) {
+
+                            }
+
+                            @Override
+                            protected void onPositiveClick(DialogInterface dialog, int which) {
+                                ActivityUtility.changeActivity(getApplicationContext(), MenuActivity.class, null);
+                            }
+                        };
+                        dialog.show(getSupportFragmentManager(), "alert");
                     }
-                    else
+                    if(clicked.equals(tab3))
                     {
-                        if(tab2.equals(previusTab))
-                        {
-
-                        }
-                    }
-                }
-                if(tab3.equals(tabId))
-                {
-                    if(tab2.equals(previusTab))
-                    {
-                        AlertDialogFragment dialog = new AlertDialogFragment("Attenzione" + previusTab, "Hai fatto tutto?", "Sì, vai avanti!", "No, resta qui!") {
+                        //Next step
+                        AlertDialogFragment dialog = new AlertDialogFragment("Attenzione", "Hai fatto tutto?", "Sì, vai avanti!", "No, resta qui!") {
                             @Override
                             protected void onNegativeClick(DialogInterface dialog, int which)
                             {
@@ -140,73 +114,17 @@ public class MainActivity extends AppCompatActivity
                     }
                     else
                     {
-                        AlertDialogFragment dialog = new AlertDialogFragment("Attenzione" + previusTab, "Sei sicuro di voler tornare indietro?", "Sì, torna indietro!", "No, resta qui!") {
-                            @Override
-                            protected void onNegativeClick(DialogInterface dialog, int which)
-                            {
-                                tabHost.setCurrentTabByTag(previusTab);
-                            }
-
-                            @Override
-                            protected void onPositiveClick(DialogInterface dialog, int which) {
-                            }
-                        };
-                        dialog.show(getSupportFragmentManager(), "alert");
+                        tabHost.setCurrentTabByTag(tab2);
                     }
                 }
-                if(tab4.equals(tabId))
-                {
+                */
 
-                    if(tab3.equals(previusTab))
-                    {
-                        AlertDialogFragment dialog = new AlertDialogFragment("Attenzione" + previusTab, "Hai fatto tutto?", "Sì, vai avanti!", "No, resta qui!") {
-                            @Override
-                            protected void onNegativeClick(DialogInterface dialog, int which)
-                            {
-                                tabHost.setCurrentTabByTag(previusTab);
-                            }
 
-                            @Override
-                            protected void onPositiveClick(DialogInterface dialog, int which) {
-                            }
-                        };
-                        dialog.show(getSupportFragmentManager(), "alert");
-                    }
-                    else
-                    {
-                        if(tab5.equals(previusTab))
-                        {
-                            AlertDialogFragment dialog = new AlertDialogFragment("Attenzione" + previusTab, "Sei sicuro di voler tornare indietro?", "Sì, torna indietro!", "No, resta qui!") {
-                                @Override
-                                protected void onNegativeClick(DialogInterface dialog, int which) {
-                                    tabHost.setCurrentTabByTag(previusTab);
-                                }
+    }
 
-                                @Override
-                                protected void onPositiveClick(DialogInterface dialog, int which) {
-                                }
-                            };
-                            dialog.show(getSupportFragmentManager(), "alert");
-                        }
-                        else
-                        {
-                            if(!tab4.equals(previusTab))
-                            {
-                                tabHost.setCurrentTabByTag(previusTab);
-                            }
-                        }
-                    }
-                }
-                if(tab5.equals(tabId))
-                {
+    public void setTabHostRules(TabHostImpl t, View.OnTouchListener onTouchListener)
+    {
 
-                }
-                if(tab6.equals(tabId))
-                {
 
-                }
-
-            }
-        });
     }
 }

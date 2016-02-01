@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import it.enricobuffoli.mvc_scoprimondo.ImageMotion.ImageMotionView;
 import it.mattiamerlini.mvc_scoprimondo.Base.Console.Console;
 
 /**
@@ -58,5 +59,10 @@ public class DataUtility
                 return false;
         }
         return true;
+    }
+
+    public static boolean isImageWellFormed(boolean b)
+    {
+        return b;
     }
 }
