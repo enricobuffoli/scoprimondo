@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true"
     tools:context="com.example.enrico.gestioneimmagini.MainActivity">
 
-    <it.mattiamerlini.mvc_scoprimondo.Views.Impl.TabHostImpl
+    <it.mattiamerlini.mvc_scoprimondo.Views.TabHost.Impl.TabHostImpl
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/tabHost">
@@ -96,7 +96,18 @@
                         android:layout_height="wrap_content"
                         android:text="Tab6 Opened"/>
                 </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tab7 Opened"/>
+                </LinearLayout>
             </FrameLayout>
         </LinearLayout>
-    </it.mattiamerlini.mvc_scoprimondo.Views.Impl.TabHostImpl>
+    </it.mattiamerlini.mvc_scoprimondo.Views.TabHost.Impl.TabHostImpl>
 </RelativeLayout>

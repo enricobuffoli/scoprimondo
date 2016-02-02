@@ -60,9 +60,4 @@ public class DataUtility
         }
         return true;
     }
-
-    public static boolean isImageWellFormed(boolean b)
-    {
-        return b;
-    }
 }

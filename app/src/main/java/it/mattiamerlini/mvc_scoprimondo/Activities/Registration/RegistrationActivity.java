@@ -21,12 +21,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 import it.mattiamerlini.mvc_scoprimondo.Activities.Login.LoginActivity;
+import it.mattiamerlini.mvc_scoprimondo.Activities.Menu.MenuActivity;
 import it.mattiamerlini.mvc_scoprimondo.Base.Console.Console;
 import it.mattiamerlini.mvc_scoprimondo.Base.User.User;
 import it.mattiamerlini.mvc_scoprimondo.Fragments.DatePickerFragment;
 import it.mattiamerlini.mvc_scoprimondo.Utilities.ActivityUtility;
 import it.mattiamerlini.mvc_scoprimondo.Utilities.DataUtility;
+import it.mattiamerlini.mvc_scoprimondo.Utilities.NetworkUtility;
 import it.mattiamerlini.mvc_scoprimondo.Utilities.RequestUtility;
+import it.mattiamerlini.mvc_scoprimondo.Utilities.SessionUtility;
 import it.mattiamerlini.mvc_scoprimondo.Utilities.UXUtility;
 
 public class RegistrationActivity extends AppCompatActivity
@@ -108,25 +111,39 @@ public class RegistrationActivity extends AppCompatActivity
                 Date birtday = DataUtility.stringToDate(txtBirthday.getText().toString());
                 String role = (String) txtRole.getSelectedItem();
 
-
-
-                if(this.checkData(name, surname, email, password, confirmPassword, birtday, role))
+                if(!NetworkUtility.isOnline(getApplicationContext()))
                 {
-                    User newUser = new User(name, surname, email, password, birtday, role);
-                    Console.log(newUser);
-
-                    if(RequestUtility.requestUserRegistration(newUser))
-                    {
-                        Map<String, String> messages = new HashMap<>();
-                        messages.put("toastMessage", "Registrazione effettuata, effettua il login!");
-                        ActivityUtility.changeActivity(getApplicationContext(), LoginActivity.class, messages);
-                    }
-
+                    ActivityUtility.showLongToast(getApplicationContext(), NetworkUtility.ERROR_NOT_CONNECTED);
                 }
                 else
                 {
-                    ActivityUtility.showLongToast(getApplicationContext(), this.errors);
+                    if(!NetworkUtility.isAPIServerReachable())
+                    {
+                        ActivityUtility.showLongToast(getApplicationContext(), NetworkUtility.ERROR_API_NOT_CONNECTED);
+                    }
+                    else
+                    {
+                        if(this.checkData(name, surname, email, password, confirmPassword, birtday, role))
+                        {
+                            User newUser = new User(name, surname, email, password, birtday, role);
+                            Console.log(newUser);
+
+                            if(RequestUtility.requestUserRegistration(newUser))
+                            {
+                                Map<String, String> messages = new HashMap<>();
+                                messages.put("toastMessage", "Registrazione effettuata, effettua il login!");
+                                ActivityUtility.changeActivity(getApplicationContext(), LoginActivity.class, messages);
+                            }
+
+                        }
+                        else
+                        {
+                            ActivityUtility.showLongToast(getApplicationContext(), this.errors);
+                        }
+                    }
                 }
+
+
             }
 
             String errors = "";

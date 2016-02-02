@@ -14,9 +14,13 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
+import android.widget.TabHost;
 import android.widget.TextView;
 
 import com.example.enrico.mvc_scoprimondo.R;
+
+import it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView;
+import it.mattiamerlini.mvc_scoprimondo.Views.TabHost.Impl.TabHostImpl;
 
 /**
  * Created by mattia on 29/01/16.
@@ -172,6 +176,21 @@ public class UXUtility<U>
     public void setMainBackground(ScrollView scrollView)
     {
         scrollView.setBackground(this.getBackground());
+    }
+
+    public void setMainBackground(TabHostImpl tabHost)
+    {
+        tabHost.setBackground(this.getBackground());
+    }
+
+    public void addTabToTabHost(TabHostImpl tabHost, String tabTag, String indicator, int tabId, ButtonGestureView buttonGestureView, int index)
+    {
+        TabHost.TabSpec spec = tabHost.newTabSpec(tabTag);
+        spec.setIndicator(indicator); //ContextCompat.getDrawable(this.getApplicationContext(), R.drawable.logo)));
+        spec.setContent(tabId);
+        tabHost.addTab(spec);
+
+        tabHost.model.addButtonGestureViewByTabIndex(buttonGestureView, index);
     }
 
     public Typeface getTypeface() {
