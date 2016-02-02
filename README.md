@@ -95,7 +95,7 @@ private boolean isButtonGestureViewWellFormed(int tabIndex)
     ```
     
     Dopo il commento `//Estrai dati dal button gesture` va estratta dal ButtonGestureView la stringa descrittiva dell'immagine creata dall'utente.
-- [ ] Parametrizzare l'API in PHP creando un file di configurazione per la connessione al Database.
+- [X] Parametrizzare l'API in PHP creando un file di configurazione per la connessione al Database.
 - [ ] Farsi dare le chiavi del server Scoprimondo e caricare l'API in PHP
     - Controllare che la connessione e i check fatti nella classe `NetworkUtility.java` funzionino correttamente sia con `hostname` o `indirizzo IP`.
 
