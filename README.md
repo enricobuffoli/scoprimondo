@@ -13,7 +13,7 @@
 - [ ] Implementare la funzione `private boolean isButtonGestureViewWellFormed(int tabIndex)` nella classe `app/src/main/java/it/mattiamerlini/mvc_scoprimondo/Views/TabHost/Impl/TabHostImpl.java`.
     La funzione è così fatta: 
     ```java
-        private boolean isButtonGestureViewWellFormed(int tabIndex)
+    private boolean isButtonGestureViewWellFormed(int tabIndex)
         {
             ButtonGestureView buttonGesture = null;
             boolean returnValue = false;
@@ -92,8 +92,8 @@
     Dopo il commento `//Estrai dati dal button gesture` va estratta dal ButtonGestureView la stringa descrittiva dell'immagine creata dall'utente.
 - [ ] Parametrizzare l'API in PHP creando un file di configurazione per la connessione al Database.
 - [ ] Farsi dare le chiavi del server Scoprimondo e caricare l'API in PHP
-    - [ ] Controllare che la connessione e i check fatti nella classe `NetworkUtility.java` funzionino correttamente sia con `hostname` o `indirizzo IP`.
-------
+    - Controllare che la connessione e i check fatti nella classe `NetworkUtility.java` funzionino correttamente sia con `hostname` o `indirizzo IP`.
+
 ###### @enricobuffoli + @mattiamerlini
 - [ ] Inserire le giuste immagini nei 5 ButtonGestureView.
 - [ ] Test vari.
