@@ -14,7 +14,7 @@
 
     La funzione è così fatta:
 
-    ```
+    ```java
 private boolean isButtonGestureViewWellFormed(int tabIndex)
 {
         ButtonGestureView buttonGesture = null;
