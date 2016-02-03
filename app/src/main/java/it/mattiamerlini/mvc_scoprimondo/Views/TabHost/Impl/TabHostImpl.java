@@ -18,6 +18,7 @@ import it.mattiamerlini.mvc_scoprimondo.Utilities.DataUtility;
 import it.mattiamerlini.mvc_scoprimondo.Utilities.NetworkUtility;
 import it.mattiamerlini.mvc_scoprimondo.Utilities.RequestUtility;
 import it.mattiamerlini.mvc_scoprimondo.Utilities.SessionUtility;
+import it.mattiamerlini.mvc_scoprimondo.Utilities.UXUtility;
 import it.mattiamerlini.mvc_scoprimondo.Views.TabHost.Interfaces.TabHost;
 import it.mattiamerlini.mvc_scoprimondo.Views.TabHost.TabHostModel.TabHostModel;
 
@@ -49,6 +50,8 @@ public class TabHostImpl extends TabHost
         };
         this.activity = activity;
         this.setup();
+
+        //UXUtility.getInstance(this.getContext()).setTabStripDrawable(this);
     }
 
     @Override

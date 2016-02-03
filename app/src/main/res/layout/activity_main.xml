@@ -17,10 +17,16 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></TabWidget>
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbarAlwaysDrawHorizontalTrack="true">
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TabWidget>
+            </HorizontalScrollView>
+
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
@@ -34,67 +40,189 @@
                     android:orientation="vertical">
                 </LinearLayout>
 
+                <!-- Tab 2 -->
                 <LinearLayout
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView
-                        android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ScrollView
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/button_gesture">
-                        <it.enricobuffoli.mvc_scoprimondo.ImageMotion.ImageMotionView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/motion_view" />
-                    </it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView>
+                        android:layout_weight=".10">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/logo"/>
+                    </ScrollView>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".90">
+                        <it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/button_gesture_tab_2">
+                            <it.enricobuffoli.mvc_scoprimondo.ImageMotion.ImageMotionView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:id="@+id/image_motion_view_tab_2" />
+                        </it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView>
+                    </LinearLayout>
 
 
                 </LinearLayout>
 
+                <!-- Tab 3 -->
                 <LinearLayout
                     android:id="@+id/tab3"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ScrollView
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Tab3 Opened"/>
+                        android:layout_weight=".10">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/logo"/>
+                    </ScrollView>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".90">
+                        <it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/button_gesture_tab_3">
+                            <it.enricobuffoli.mvc_scoprimondo.ImageMotion.ImageMotionView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:id="@+id/image_motion_view_tab_3" />
+                        </it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView>
+                    </LinearLayout>
+
+
                 </LinearLayout>
 
+                <!-- Tab 4 -->
                 <LinearLayout
                     android:id="@+id/tab4"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ScrollView
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Tab4 Opened"/>
+                        android:layout_weight=".10">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/logo"/>
+                    </ScrollView>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".90">
+                        <it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/button_gesture_tab_4">
+                            <it.enricobuffoli.mvc_scoprimondo.ImageMotion.ImageMotionView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:id="@+id/image_motion_view_tab_4" />
+                        </it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView>
+                    </LinearLayout>
+
+
                 </LinearLayout>
 
+                <!-- Tab 5 -->
                 <LinearLayout
                     android:id="@+id/tab5"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ScrollView
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Tab5 Opened"/>
+                        android:layout_weight=".10">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/logo"/>
+                    </ScrollView>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".90">
+                        <it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/button_gesture_tab_5">
+                            <it.enricobuffoli.mvc_scoprimondo.ImageMotion.ImageMotionView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:id="@+id/image_motion_view_tab_5" />
+                        </it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView>
+                    </LinearLayout>
+
+
                 </LinearLayout>
 
+                <!-- Tab 6 -->
                 <LinearLayout
                     android:id="@+id/tab6"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ScrollView
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Tab6 Opened"/>
+                        android:layout_weight=".10">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/logo"/>
+                    </ScrollView>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".90">
+                        <it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/button_gesture_tab_6">
+                            <it.enricobuffoli.mvc_scoprimondo.ImageMotion.ImageMotionView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:id="@+id/image_motion_view_tab_6" />
+                        </it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView>
+                    </LinearLayout>
+
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -102,10 +230,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Tab7 Opened"/>
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>

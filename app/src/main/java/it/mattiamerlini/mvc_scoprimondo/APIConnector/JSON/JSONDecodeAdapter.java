@@ -6,6 +6,7 @@ import com.json.parsers.JsonParserFactory;
 import java.util.ArrayList;
 import java.util.Map;
 
+import it.mattiamerlini.mvc_scoprimondo.Base.Console.Console;
 import it.mattiamerlini.mvc_scoprimondo.Base.User.User;
 import it.mattiamerlini.mvc_scoprimondo.Utilities.DataUtility;
 
@@ -22,6 +23,7 @@ public class JSONDecodeAdapter
     {
         this.factory = JsonParserFactory.getInstance();
         this.parser = this.factory.newJsonParser();
+        Console.log(jsonString);
         this.jsonMap = this.parser.parseJson(jsonString);
     }
 

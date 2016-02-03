@@ -1,17 +1,20 @@
 package it.enricobuffoli.mvc_scoprimondo.ButtonGesture;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.util.AttributeSet;
+import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import it.enricobuffoli.mvc_scoprimondo.ImageClasses.Image;
 import it.enricobuffoli.mvc_scoprimondo.ImageMotion.ImageMotionModel;
 import it.enricobuffoli.mvc_scoprimondo.ImageMotion.ImageMotionView;
+import it.mattiamerlini.mvc_scoprimondo.Utilities.UXUtility;
+
 import com.example.enrico.mvc_scoprimondo.R;
 
 import java.util.ArrayList;
@@ -24,11 +27,12 @@ import java.util.Observer;
 
 public class ButtonGestureView extends FrameLayout implements Observer {
 
+    private LinearLayout buttonLayout;
     private ArrayList<ImageButton> buttons = new ArrayList<>();
     private static final int []buttonDrawables= {R.mipmap.function_icons_up, R.mipmap.function_icons_down, R.mipmap.function_icons_top, R.mipmap.function_icons_bottom, R.mipmap.function_icons_delete, R.mipmap.specchia};
     private static final int []buttonBackgroundDrawables={R.mipmap.active, R.mipmap.inactive, R.mipmap.cliccked};
     private static final int active=0,inactive=1,cliccked=2;
-    private static final int x_delay=100,y_delay=100;
+    private static final int x_delay=100,y_delay=2;
     private final OnClickListener []buttonListeners={new onUpListener(), new onDownListener(), new onTopListener(), new onBottomListener(), new onDeleteListener(), new onMirroringListener()};
     private ButtonGestureModel buttonGestureModel;
     private ImageMotionModel imageMotionModel;
@@ -45,31 +49,49 @@ public class ButtonGestureView extends FrameLayout implements Observer {
         super(context, attrs, defStyleAttr);
     }
 
-    public void init() {
-        this.setBackgroundColor(Color.rgb(135,206,235));
+    public void init(int imageMotionViewId)
+    {
         buttonGestureModel = new ButtonGestureModel();
         imageMotionModel = new ImageMotionModel();
-        imageMotionView = (ImageMotionView) findViewById(R.id.motion_view);
+        imageMotionView = (ImageMotionView) findViewById(imageMotionViewId);
         imageMotionView.createController(imageMotionModel);
+
+        UXUtility.getInstance(this.getContext()).setImageMotionViewBorder(this.imageMotionView);
+
         this.imageMotionModel.addObserver(this);
         initButton();
+
+
+
         System.out.println("ciao");
         this.addImage(R.mipmap.ciao);
         this.addImage(R.mipmap.ciao2);
     }
 
     private void initButton() {
+        this.buttonLayout = new LinearLayout(this.getContext());
         for (int i = 0; i < 6; i++) {
             ImageButton temp= new ImageButton(this.getContext());
-            temp.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            temp.setY(y_delay);
-            temp.setX(x_delay * i + x_delay);
+            //Layout params - Merlini 3/2/16
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1/6f);
+            //params.weight = 1/6;
+            params.setMargins(50, 5, 50, 10);
+            //params.gravity = Gravity.CENTER_HORIZONTAL;
+            temp.setLayoutParams(params);
+            //temp.setY(y_delay);
+            //temp.setX(x_delay * i);// + x_delay);
             temp.setOnTouchListener(new onButtonTouch());
             temp.setImageResource(buttonDrawables[i]);
             temp.setOnClickListener(buttonListeners[i]);
             this.buttonGestureModel.addButton(temp);
-            this.addView(temp);
+            this.buttonLayout.addView(temp);
+            //this.addView(temp);
         }
+        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        params.setMargins(0, 0, 0, 0);
+        params.gravity = Gravity.CENTER_HORIZONTAL;
+        this.buttonLayout.setLayoutParams(params);
+        this.addView(this.buttonLayout);
         this.deactiveAllButtons();
     }
 
@@ -168,6 +190,11 @@ public class ButtonGestureView extends FrameLayout implements Observer {
 
                 return false;
             }
+        }
+
+        public String toString()
+        {
+            return (this.imageMotionView != null) ? this.imageMotionView.toString() : "";
         }
 
 }

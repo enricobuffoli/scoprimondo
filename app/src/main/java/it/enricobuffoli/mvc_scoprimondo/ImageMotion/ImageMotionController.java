@@ -78,4 +78,9 @@ public class ImageMotionController implements Observer {
         }
     }
 
+    public String toString()
+    {
+        return this.imageMotionModel.toString();
+    }
+
 }

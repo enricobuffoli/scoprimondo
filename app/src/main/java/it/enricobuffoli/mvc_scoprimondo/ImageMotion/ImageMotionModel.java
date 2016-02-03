@@ -130,7 +130,7 @@ public class ImageMotionModel extends Model {
     private void addImageMemory(ImageState image)
     {
         float[] values = image.getImage().getImageChanges();
-        imagesMemory.add(new ImageMemory(values[X],values[Y],values[angle],values[scale],image.getState(),image.getImage().toString()));
+        imagesMemory.add(new ImageMemory(values[X], values[Y], values[angle], values[scale], image.getState(), image.getImage().toString()));
 
     }
     private void addImageMemory(Image image, int state)
@@ -143,6 +143,15 @@ public class ImageMotionModel extends Model {
     {
         return imagesMemory;
     }
+
+    public String toString()
+    {
+        String out = "";
+        for(int i = 0; i < this.getImagesMemory().size(); i++)
+            out += String.format("{ [Modifica %d] => %s}", i, this.getImagesMemory().get(i).toString());
+        return out;
+    }
+
     public class ImageState {
         private int state;
         private Image image;
@@ -201,6 +210,11 @@ public class ImageMotionModel extends Model {
 
         public String getDrawable() {
             return drawable;
+        }
+
+        public String toString()
+        {
+            return String.format("{X => %f, Y => %f, Angle => %f, Scale => %f, State => %d, Drawable => %s}", this.getX(), this.getY(), this.getAngle(), this.getScale(), this.getState(), this.getDrawable());
         }
     }
 }

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView;
+import it.enricobuffoli.mvc_scoprimondo.ImageMotion.ImageMotionModel;
 import it.mattiamerlini.mvc_scoprimondo.Utilities.UXUtility;
 import it.mattiamerlini.mvc_scoprimondo.Views.TabHost.Impl.TabHostImpl;
 
@@ -27,20 +28,23 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         //Retrieve elements
-        this.madreNatura = (ButtonGestureView) findViewById(R.id.button_gesture);
         this.tabHost = (TabHostImpl) findViewById(R.id.tabHost);
 
-        /* Inizializzazioni di prova, vanno in realtà pescate dall'XML */
-        this.madreTerra = new ButtonGestureView(this.getApplicationContext());
-        this.terraPadri = new ButtonGestureView(this.getApplicationContext());
-        this.madrePatria = new ButtonGestureView(this.getApplicationContext());
-        this.terraFrontiera = new ButtonGestureView(this.getApplicationContext());
+        this.madreNatura = (ButtonGestureView) findViewById(R.id.button_gesture_tab_2);
+        this.madreTerra = (ButtonGestureView) findViewById(R.id.button_gesture_tab_3);
+        this.terraPadri = (ButtonGestureView) findViewById(R.id.button_gesture_tab_4);
+        this.madrePatria = (ButtonGestureView) findViewById(R.id.button_gesture_tab_5);
+        this.terraFrontiera = (ButtonGestureView) findViewById(R.id.button_gesture_tab_6);
 
-        this.madreNatura.init();
+        //Init ButtonGestureViews
+        this.madreNatura.init(R.id.image_motion_view_tab_2);
+        this.madreTerra.init(R.id.image_motion_view_tab_3);
+        this.terraPadri.init(R.id.image_motion_view_tab_4);
+        this.madrePatria.init(R.id.image_motion_view_tab_5);
+        this.terraFrontiera.init(R.id.image_motion_view_tab_6);
+
         this.tabHost.setup(this);
-
         this.initComponents();
-
         this.tabHost.setCurrentTab(1);
     }
 
@@ -56,5 +60,7 @@ public class MainActivity extends AppCompatActivity
         ux.addTabToTabHost(this.tabHost, "MADRE PATRIA", "MADRE PATRIA", R.id.tab5, this.madrePatria, 4);
         ux.addTabToTabHost(this.tabHost, "TERRA FRONTIERA", "TERRA FRONTIERA", R.id.tab6, this.terraFrontiera, 5);
         ux.addTabToTabHost(this.tabHost, "FINE", "FINE", R.id.tab7, null, 6);
+
+        ux.styleTabHostIndicators(this.tabHost);
     }
 }

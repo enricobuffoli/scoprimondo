@@ -62,6 +62,12 @@ public class Request extends AsyncTask<String, Integer, String>
 
             //Reader from the REST Server
             this.reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+
+            /*String out="";
+            String s = "";
+            while ((s = this.reader.readLine()) != null) out += s;
+            return out;*/
+
             return this.reader.readLine();
         }
         catch (Exception e)

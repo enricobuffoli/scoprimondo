@@ -73,4 +73,9 @@ public class ImageMotionView extends RelativeLayout {
 
     }
 
+    public String toString()
+    {
+        return this.imageMotionController.toString();
+    }
+
 }

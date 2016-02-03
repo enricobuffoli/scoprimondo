@@ -11,15 +11,18 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TabHost;
+import android.widget.TabWidget;
 import android.widget.TextView;
 
 import com.example.enrico.mvc_scoprimondo.R;
 
 import it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView;
+import it.enricobuffoli.mvc_scoprimondo.ImageMotion.ImageMotionView;
 import it.mattiamerlini.mvc_scoprimondo.Views.TabHost.Impl.TabHostImpl;
 
 /**
@@ -45,11 +48,13 @@ public class UXUtility<U>
     private int footerBackgroundColor;
     private int footerTextColor;
     private Drawable background;
+    private Drawable tabWidgetButtonBorder;
+    private Drawable imageMotionViewBorder;
 
     private UXUtility(Context context)
     {
         this.context = context;
-        this.typeface = Typeface.createFromAsset(this.context.getAssets(),"fonts/Montserrat-Bold.otf");
+        this.typeface = Typeface.createFromAsset(this.context.getAssets(), "fonts/Montserrat-Bold.otf");
         this.textColor = Color.parseColor("#1b455a");
         this.buttonColor = Color.parseColor("#f38630");
         this.marginTop = 10;
@@ -57,6 +62,8 @@ public class UXUtility<U>
         this.footerBackgroundColor = Color.parseColor("#1b455a");
         this.footerTextColor = Color.parseColor("#ffffff");
         this.background = ContextCompat.getDrawable(this.context, R.drawable.sfondo);
+        this.tabWidgetButtonBorder = ContextCompat.getDrawable(this.context, R.drawable.tab_widget_button_border);
+        this.imageMotionViewBorder = ContextCompat.getDrawable(this.context, R.drawable.image_motion_view_border);
     }
 
     public void setLogo(ImageView imageView, int below)
@@ -183,6 +190,16 @@ public class UXUtility<U>
         tabHost.setBackground(this.getBackground());
     }
 
+    public void setImageMotionViewBorder(ImageMotionView imageMotionView)
+    {
+        imageMotionView.setBackground(this.getImageMotionViewBorder());
+    }
+
+    private void setTabHostIndicatorBackground(LinearLayout linearLayout)
+    {
+        linearLayout.setBackground(ContextCompat.getDrawable(this.context, R.drawable.tab_widget_button_border));
+    }
+
     public void addTabToTabHost(TabHostImpl tabHost, String tabTag, String indicator, int tabId, ButtonGestureView buttonGestureView, int index)
     {
         TabHost.TabSpec spec = tabHost.newTabSpec(tabTag);
@@ -191,6 +208,27 @@ public class UXUtility<U>
         tabHost.addTab(spec);
 
         tabHost.model.addButtonGestureViewByTabIndex(buttonGestureView, index);
+    }
+
+    public void styleTabHostIndicators(TabHostImpl tabHost)
+    {
+        TabWidget tw = tabHost.getTabWidget();
+
+        for(int i = 0; i < tw.getTabCount(); i++)
+        {
+            LinearLayout linearLayout = (LinearLayout) tw.getChildAt(i);
+            this.styleTabHostIndicator(linearLayout);
+        }
+    }
+
+    private void styleTabHostIndicator(LinearLayout linearLayout)
+    {
+        TextView textView = (TextView) linearLayout.getChildAt(1);
+        textView.setTextColor(this.getTextColor());
+        this.setTabHostIndicatorBackground(linearLayout);
+
+
+        textView.setTypeface(this.getTypeface());
     }
 
     public Typeface getTypeface() {
@@ -233,5 +271,12 @@ public class UXUtility<U>
         return background;
     }
 
+    public Drawable getTabWidgetButtonBorder() {
+        return tabWidgetButtonBorder;
+    }
+
+    public Drawable getImageMotionViewBorder() {
+        return imageMotionViewBorder;
+    }
 
 }

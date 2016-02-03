@@ -75,7 +75,7 @@ public class RequestUtility
     public static boolean requestButtonGestureViewSave(ButtonGestureView buttonGestureView, int index)
     {
         //Estrai dati dal button gesture
-        String immagine = "testimmagine";
+        String immagine = (buttonGestureView != null) ? buttonGestureView.toString() : "testimmagine";
         String email = SessionUtility.getInstance(null).getUserLogged().getEmail();
 
         Map args = new HashMap();
