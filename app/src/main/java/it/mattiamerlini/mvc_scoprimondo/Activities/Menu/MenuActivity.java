@@ -13,6 +13,9 @@ import android.widget.TextView;
 
 import com.example.enrico.mvc_scoprimondo.R;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import it.enricobuffoli.mvc_scoprimondo.MainActivity;
 import it.mattiamerlini.mvc_scoprimondo.Activities.Login.LoginActivity;
 import it.mattiamerlini.mvc_scoprimondo.Base.User.User;
@@ -82,7 +85,14 @@ public class MenuActivity extends AppCompatActivity
         });
 
         User logged = SessionUtility.getInstance(getApplicationContext()).getUserLogged();
-        this.userLogged.setText(String.format("Nome: %s %s, Ruolo: %s", logged.getName().toUpperCase(), logged.getSurname().toUpperCase(), logged.getRole().toUpperCase()));
+        if(logged == null)
+        {
+            Map<String, String> messages = new HashMap<>();
+            messages.put("toastMessage", "Effettua il login prima di giocare!");
+            ActivityUtility.changeActivity(this.getApplicationContext(), LoginActivity.class, messages);
+        }
+        else
+            this.userLogged.setText(String.format("Nome: %s %s, Ruolo: %s", logged.getName().toUpperCase(), logged.getSurname().toUpperCase(), logged.getRole().toUpperCase()));
 
 
 

@@ -20,6 +20,18 @@ public class ImageMotionModel extends Model {
         images = new ArrayList<>();
         imagesMemory = new ArrayList<>();
     }
+
+    public ArrayList<Integer> getInsertedImages()
+    {
+        ArrayList<Integer> insertedImages = new ArrayList<>();
+        for(ImageMemory imageMemory : this.getImagesMemory())
+        {
+            if(imageMemory.getState() != ImageMotionModel.removed)
+                insertedImages.add(Integer.parseInt(imageMemory.getDrawable()));
+        }
+        return insertedImages;
+    }
+
     public void addImage(Image image)
     {
         image.setEnabled(false);

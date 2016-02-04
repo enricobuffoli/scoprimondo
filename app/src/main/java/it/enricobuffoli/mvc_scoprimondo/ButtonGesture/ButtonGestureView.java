@@ -63,9 +63,14 @@ public class ButtonGestureView extends FrameLayout implements Observer {
 
 
 
-        System.out.println("ciao");
-        this.addImage(R.mipmap.ciao);
-        this.addImage(R.mipmap.ciao2);
+        //System.out.println("ciao");
+        //this.addImage(R.mipmap.ciao);
+        //this.addImage(R.mipmap.ciao2);
+    }
+
+    public ArrayList<Integer> getInsertedImages()
+    {
+        return this.imageMotionModel.getInsertedImages();
     }
 
     private void initButton() {

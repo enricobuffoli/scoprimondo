@@ -5,9 +5,12 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.util.AttributeSet;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.Callable;
 
 import it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView;
+import it.mattiamerlini.mvc_scoprimondo.Activities.Login.LoginActivity;
 import it.mattiamerlini.mvc_scoprimondo.Activities.Menu.MenuActivity;
 import it.mattiamerlini.mvc_scoprimondo.Base.Console.Console;
 import it.mattiamerlini.mvc_scoprimondo.Base.User.User;
@@ -260,6 +263,13 @@ public class TabHostImpl extends TabHost
 
     private boolean isButtonGestureViewWellFormed(int tabIndex)
     {
+        if(SessionUtility.getInstance(this.getContext()).getUserLogged() == null)
+        {
+            Map<String, String> messages = new HashMap<>();
+            messages.put("toastMessage", "Effettua il login prima di giocare!");
+            ActivityUtility.changeActivity(this.getContext(), LoginActivity.class, messages);
+        }
+
         ButtonGestureView buttonGesture = null;
         boolean returnValue = false;
         switch (tabIndex)

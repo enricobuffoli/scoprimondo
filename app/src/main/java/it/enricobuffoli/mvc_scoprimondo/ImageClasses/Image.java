@@ -46,7 +46,14 @@ public class Image extends ImageView {
         this.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
         imageRect= new Rectangle(this.getDrawable().getIntrinsicWidth(),this.getDrawable().getIntrinsicHeight());
         center=new PointF(this.getDrawable().getIntrinsicWidth()/2,this.getDrawable().getIntrinsicHeight()/2);
-        imageBitmap = BitmapFactory.decodeResource(this.getResources(),drawable);
+
+        /*
+         * Fix Memory
+         */
+        //BitmapFactory.Options options = new BitmapFactory.Options();
+        //options.inSampleSize = 2; //1 normale, due è minorata e occupa meno spazio
+
+        imageBitmap = BitmapFactory.decodeResource(this.getResources(),drawable);//, options);
         this.initBorderBitmap();
         this.setImageBitmap(imageBitmap);
         imageTouch=new ImageTouchListener(this, imageRect, center);

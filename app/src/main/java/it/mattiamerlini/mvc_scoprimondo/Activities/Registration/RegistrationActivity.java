@@ -218,7 +218,7 @@ public class RegistrationActivity extends AppCompatActivity
         ux.setCenteredEditText(this.txtConfirmPassword, "", this.labelConfirmPassword.getId(), InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
 
         ux.setLeftTextView(this.labelBirthday, "Data di nascita", this.txtConfirmPassword.getId());
-        ux.setCenteredEditText(this.txtBirthday, "", this.labelBirthday.getId(), InputType.TYPE_CLASS_DATETIME | InputType.TYPE_DATETIME_VARIATION_DATE);
+        ux.setCenteredEditText(this.txtBirthday, "", this.labelBirthday.getId(), InputType.TYPE_NULL);
 
         ux.setLeftTextView(this.labelRole, "Ruolo", this.txtBirthday.getId());
         ux.setCenteredSpinner(this.txtRole, new String[]{"Bambino", "Psicologo"}, "Bambino", this.labelRole.getId());

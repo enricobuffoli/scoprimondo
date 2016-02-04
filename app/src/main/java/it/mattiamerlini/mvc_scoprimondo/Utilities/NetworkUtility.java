@@ -5,10 +5,12 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 
+import java.net.HttpURLConnection;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketAddress;
+import java.net.URL;
 import java.util.concurrent.ExecutionException;
 
 import it.mattiamerlini.mvc_scoprimondo.APIConnector.APIConfig;
@@ -51,6 +53,25 @@ public class NetworkUtility
         return netInfo != null && netInfo.isConnected();
     }
 
+    public static boolean isApiServerReachable2()
+    {
+        try
+        {
+            URL url = new URL(APIConfig.API_HOST);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            int code = connection.getResponseCode();
+
+            if (code == 200)
+                return true;
+        }
+        catch (Exception e)
+        {
+            Console.log(e.getMessage());
+            return false;
+        }
+        return false;
+    }
+
     public static boolean isAPIServerReachable()
     {
         AsyncTask<String, Boolean, Boolean> a = new AsyncTask<String, Boolean, Boolean>() {
@@ -58,12 +79,7 @@ public class NetworkUtility
             protected Boolean doInBackground(String... params) {
                 try
                 {
-                    return InetAddress.getByName(APIConfig.API_IP).isReachable(2000);
-                    /*SocketAddress sockaddr = new InetSocketAddress(APIConfig.API_HOST, APIConfig.API_PORT);
-                    Socket sock = new Socket();
-                    int timeoutMs = 2000;
-                    sock.connect(sockaddr, timeoutMs);
-                    return true;*/
+                    return InetAddress.getByName(APIConfig.API_IP).isReachable(2000) && NetworkUtility.isApiServerReachable2();
                 }
                 catch(Exception e)
                 {

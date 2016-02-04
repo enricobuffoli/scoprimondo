@@ -1,16 +1,37 @@
 package it.enricobuffoli.mvc_scoprimondo;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.Spinner;
 
 import it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView;
-import it.enricobuffoli.mvc_scoprimondo.ImageMotion.ImageMotionModel;
+import it.mattiamerlini.mvc_scoprimondo.Activities.Login.LoginActivity;
+import it.mattiamerlini.mvc_scoprimondo.Base.Console.Console;
+import it.mattiamerlini.mvc_scoprimondo.Base.User.User;
+import it.mattiamerlini.mvc_scoprimondo.Utilities.ActivityUtility;
+import it.mattiamerlini.mvc_scoprimondo.Utilities.SessionUtility;
 import it.mattiamerlini.mvc_scoprimondo.Utilities.UXUtility;
+import it.mattiamerlini.mvc_scoprimondo.Views.ImageSpinner.ImageSpinnerAdapter;
+import it.mattiamerlini.mvc_scoprimondo.Views.ImageSpinner.ImageSpinnerItem;
+import it.mattiamerlini.mvc_scoprimondo.Views.ImageSpinner.ImageSpinnerModel;
+import it.mattiamerlini.mvc_scoprimondo.Views.ImageSpinner.ImageSpinnerView;
 import it.mattiamerlini.mvc_scoprimondo.Views.TabHost.Impl.TabHostImpl;
 
 
 import com.example.enrico.mvc_scoprimondo.R;
+
+import java.util.AbstractList;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -26,6 +47,13 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if(SessionUtility.getInstance(getApplicationContext()).getUserLogged() == null)
+        {
+            Map<String, String> messages = new HashMap<>();
+            messages.put("toastMessage", "Effettua il login prima di giocare!");
+            ActivityUtility.changeActivity(this.getApplicationContext(), LoginActivity.class, messages);
+        }
 
         //Retrieve elements
         this.tabHost = (TabHostImpl) findViewById(R.id.tabHost);
@@ -46,6 +74,35 @@ public class MainActivity extends AppCompatActivity
         this.tabHost.setup(this);
         this.initComponents();
         this.tabHost.setCurrentTab(1);
+
+        /*
+        * Inizio test ImageSpinner
+        */
+
+        ImageView imageView = (ImageView) findViewById(R.id.showDialogSpinner);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                final ImageSpinnerView spinnerMadreNatura = new ImageSpinnerView(MainActivity.this.getApplicationContext());
+                spinnerMadreNatura.init(MainActivity.this, ImageSpinnerModel.IMAGE_SPINNER_ITEMS_MADRE_NATURA);
+
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setView(spinnerMadreNatura);
+                builder.setNeutralButton("Ok aggiungi", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        MainActivity.this.madreNatura.addImage(spinnerMadreNatura.getDrawableSelected());
+                    }
+                });
+                builder.create().show();
+            }
+        });
+
+        /*
+         * Fine test ImageSpinner
+         */
     }
 
     private void initComponents() {
