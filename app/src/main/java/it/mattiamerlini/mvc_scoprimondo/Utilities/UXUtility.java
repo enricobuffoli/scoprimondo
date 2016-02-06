@@ -1,11 +1,17 @@
 package it.mattiamerlini.mvc_scoprimondo.Utilities;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.Matrix;
 import android.graphics.Typeface;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.text.Editable;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -87,6 +93,15 @@ public class UXUtility<U>
         params.addRule(RelativeLayout.BELOW, below);
         params.addRule(RelativeLayout.CENTER_HORIZONTAL, RelativeLayout.TRUE);
         textView.setLayoutParams(params);
+    }
+
+    public void styleButton(Button button, String text, float textSize)
+    {
+        button.setText(text);
+        button.setTextColor(this.getTextColor());
+        button.setBackgroundColor(this.getButtonColor());
+        button.setTypeface(this.getTypeface());
+        button.setTextSize(textSize);
     }
 
     public void setCenteredButton(Button button, String text, int below)
@@ -227,9 +242,22 @@ public class UXUtility<U>
         TextView textView = (TextView) linearLayout.getChildAt(1);
         textView.setTextColor(this.getTextColor());
         this.setTabHostIndicatorBackground(linearLayout);
-
-
         textView.setTypeface(this.getTypeface());
+    }
+
+    public BitmapDrawable resizeImage(Activity activity, Bitmap bitmap, int dpSize)
+    {
+        int width = bitmap.getWidth();
+        int height = bitmap.getHeight();
+        Resources r = activity.getResources();
+        float bounding = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dpSize, r.getDisplayMetrics());
+        float xScale = bounding / width;
+        float yScale = bounding / height;
+        float scale = (xScale <= yScale) ? xScale : yScale;
+        Matrix matrix = new Matrix();
+        matrix.postScale(scale, scale);
+        Bitmap scaledBitmap = Bitmap.createBitmap(bitmap, 0, 0, width, height, matrix, true);
+        return new BitmapDrawable(activity.getApplicationContext().getResources(), scaledBitmap);
     }
 
     public Typeface getTypeface() {

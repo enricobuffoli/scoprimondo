@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.util.AttributeSet;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Callable;
@@ -22,6 +23,7 @@ import it.mattiamerlini.mvc_scoprimondo.Utilities.NetworkUtility;
 import it.mattiamerlini.mvc_scoprimondo.Utilities.RequestUtility;
 import it.mattiamerlini.mvc_scoprimondo.Utilities.SessionUtility;
 import it.mattiamerlini.mvc_scoprimondo.Utilities.UXUtility;
+import it.mattiamerlini.mvc_scoprimondo.Views.ImageSpinner.ImageSpinnerModel;
 import it.mattiamerlini.mvc_scoprimondo.Views.TabHost.Interfaces.TabHost;
 import it.mattiamerlini.mvc_scoprimondo.Views.TabHost.TabHostModel.TabHostModel;
 
@@ -270,14 +272,25 @@ public class TabHostImpl extends TabHost
             ActivityUtility.changeActivity(this.getContext(), LoginActivity.class, messages);
         }
 
-        ButtonGestureView buttonGesture = null;
+        ButtonGestureView buttonGesture = this.model.getButtonGestureViewByTabIndex(tabIndex);
+        Console.log(String.format("Controllo %d -> [%s]", tabIndex, buttonGesture));
+        ArrayList<Integer> inserted = buttonGesture.getInsertedImages();
         boolean returnValue = false;
         switch (tabIndex)
         {
             case 1: //MADRE NATURA
-                buttonGesture = this.model.getButtonGestureViewByTabIndex(tabIndex);
-                Console.log(String.format("Controllo %d -> [%s]", tabIndex, buttonGesture));
-                //Do checks
+                /*ArrayList<Integer> required = ImageSpinnerModel.getInstance(this.getContext()).getImagesIds(ImageSpinnerModel.IMAGE_SPINNER_ITEMS_MADRE_NATURA_REQUIRED);
+                for(int i : required)
+                {
+                    returnValue = false;
+                    for(int j : inserted)
+                    {
+                        if(i == j)
+                            returnValue = true;
+                    }
+                    if(returnValue == false)
+                        return false;
+                }*/
                 returnValue = true;
                 break;
             case 2: //MADRE TERRA

@@ -5,14 +5,15 @@
 
 ###ToDo List (cose da fare):
 ###### @enricobuffoli
-- [X] Sistemare le dimensioni del ButtonGestureView e dell'ImageMotionView in modo da avere un 30/70 di spazio percentuale.
-- [X] Impostare le dimensioni dei pulsanti nel ButtonGestureView.
 - [ ] Nel ButtonGestureView quando è selezionata un'immagine in un livello sottostante e viene applicata una trasforzazione (es: specchio) l'applicazione crasha.
 - [ ] Nel ButtonGestureView quando non c'è nessuna immagine scompare il canvas.
+- [ ] Nel ButtonGestureView, selezionando un'immagine PNG il canale alpha diventa tutto rosso.
 - [ ] Controllare che non ci siano abusi di memoria nel `Bitmap.decodeResorces()`.
+- [X] Sistemare le dimensioni del ButtonGestureView e dell'ImageMotionView in modo da avere un 30/70 di spazio percentuale.
+- [X] Impostare le dimensioni dei pulsanti nel ButtonGestureView.
 - [X] Modificare la classe ButtonGesture e ImageMotion per permetterne la replicazione (ne servono 5). Legare l'ImageMotion al ButtonGesture tramite codice, in modo da non dipendere staticamente dall'XML.
 - [X] Predisporre un metodo toString() disponibile da ButtonGestureView per ricevere una descrizione di TUTTE le immagini presenti nella schermata. Questo dato sarà quello salvato a Database.
-- [ ] Implementare la funzione `private boolean isButtonGestureViewWellFormed(int tabIndex)` nella classe `app/src/main/java/it/mattiamerlini/mvc_scoprimondo/Views/TabHost/Impl/TabHostImpl.java`.
+- [X] Implementare la funzione `private boolean isButtonGestureViewWellFormed(int tabIndex)` nella classe `app/src/main/java/it/mattiamerlini/mvc_scoprimondo/Views/TabHost/Impl/TabHostImpl.java`.
 
     La funzione è così fatta:
 
@@ -98,10 +99,11 @@ private boolean isButtonGestureViewWellFormed(int tabIndex)
     
     Dopo il commento `//Estrai dati dal button gesture` va estratta dal ButtonGestureView la stringa descrittiva dell'immagine creata dall'utente.
 - [X] Parametrizzare l'API in PHP creando un file di configurazione per la connessione al Database.
-- [ ] Farsi dare le chiavi del server Scoprimondo e caricare l'API in PHP
-    - Controllare che la connessione e i check fatti nella classe `NetworkUtility.java` funzionino correttamente sia con `hostname` o `indirizzo IP`.
-- [ ] Finire lo Spinner.
-- [ ] Creare l'Alert per lo Spinner.
+- [X] ~~Farsi dare le chiavi del server Scoprimondo e caricare l'API in PHP~~ API caricata su altro server.
+- [X] Controllare che la connessione e i check fatti nella classe `NetworkUtility.java` funzionino correttamente sia con `hostname` o `indirizzo IP`.
+- [X] Finire lo Spinner.
+- [X] Creare l'Alert per lo Spinner.
+
 ###### @enricobuffoli + @mattiamerlini
 - [ ] Inserire le giuste immagini nei 5 ButtonGestureView.
 - [ ] Test vari.

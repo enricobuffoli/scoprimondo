@@ -20,7 +20,7 @@
             <HorizontalScrollView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scrollbarAlwaysDrawHorizontalTrack="true">
+                android:scrollbars="none">
                 <TabWidget
                     android:id="@android:id/tabs"
                     android:layout_width="match_parent"
@@ -44,20 +44,23 @@
                 <LinearLayout
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <ScrollView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight=".10">
-                        <ImageView
-                            android:id="@+id/showDialogSpinner"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/logo"/>
-                    </ScrollView>
+                    android:layout_height="match_parent">
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".10"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+                        <Button
+                            android:id="@+id/showDialogSpinnerMadreNatura"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
                         android:layout_weight=".90">
                         <it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView
                             android:layout_width="match_parent"
@@ -82,16 +85,20 @@
                 <LinearLayout
                     android:id="@+id/tab3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <ScrollView
+                    android:layout_height="match_parent">
+                    <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight=".10">
-                        <ImageView
+                        android:layout_height="match_parent"
+                        android:layout_weight=".10"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+                        <Button
+                            android:id="@+id/showDialogSpinnerMadreTerra"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/logo"/>
-                    </ScrollView>
+                            android:layout_height="match_parent"/>
+                    </LinearLayout>
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -119,16 +126,20 @@
                 <LinearLayout
                     android:id="@+id/tab4"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <ScrollView
+                    android:layout_height="match_parent">
+                    <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight=".10">
-                        <ImageView
+                        android:layout_height="match_parent"
+                        android:layout_weight=".10"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+                        <Button
+                            android:id="@+id/showDialogSpinnerTerraPadri"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/logo"/>
-                    </ScrollView>
+                            android:layout_height="match_parent"/>
+                    </LinearLayout>
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -156,16 +167,20 @@
                 <LinearLayout
                     android:id="@+id/tab5"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <ScrollView
+                    android:layout_height="match_parent">
+                    <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight=".10">
-                        <ImageView
+                        android:layout_height="match_parent"
+                        android:layout_weight=".10"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+                        <Button
+                            android:id="@+id/showDialogSpinnerMadrePatria"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/logo"/>
-                    </ScrollView>
+                            android:layout_height="match_parent"/>
+                    </LinearLayout>
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -193,16 +208,20 @@
                 <LinearLayout
                     android:id="@+id/tab6"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <ScrollView
+                    android:layout_height="match_parent">
+                    <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight=".10">
-                        <ImageView
+                        android:layout_height="match_parent"
+                        android:layout_weight=".10"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+                        <Button
+                            android:id="@+id/showDialogSpinnerTerraFrontiera"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/logo"/>
-                    </ScrollView>
+                            android:layout_height="match_parent"/>
+                    </LinearLayout>
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"

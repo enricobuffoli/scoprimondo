@@ -93,7 +93,7 @@ public class ButtonGestureView extends FrameLayout implements Observer {
             //this.addView(temp);
         }
         FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        params.setMargins(0, 0, 0, 0);
+        params.setMargins(0, 5, 0, 0);
         params.gravity = Gravity.CENTER_HORIZONTAL;
         this.buttonLayout.setLayoutParams(params);
         this.addView(this.buttonLayout);

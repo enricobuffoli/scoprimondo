@@ -23,6 +23,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import it.mattiamerlini.mvc_scoprimondo.Utilities.UXUtility;
+
 /**
  * Created by mattia on 04/02/16.
  */
@@ -70,21 +72,8 @@ public class ImageSpinnerAdapter extends ArrayAdapter<Integer>
         text.setText(spinnerText);
 
         Bitmap bitmap = ((BitmapDrawable) spinnerImage).getBitmap();
-        int width = bitmap.getWidth();
-        int height = bitmap.getHeight();
-        Resources r = this.activity.getResources();
-        float bounding = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 100, r.getDisplayMetrics());
-        float xScale = bounding / width;
-        float yScale = bounding / height;
-        float scale = (xScale <= yScale) ? xScale : yScale;
-        Matrix matrix = new Matrix();
-        matrix.postScale(scale, scale);
-        Bitmap scaledBitmap = Bitmap.createBitmap(bitmap, 0, 0, width, height, matrix, true);
-        BitmapDrawable result = new BitmapDrawable(scaledBitmap);
 
-        image.setImageDrawable(result);
-        image.setMaxWidth(15);
-        image.setMaxHeight(15);
+        image.setImageDrawable(UXUtility.getInstance(this.getContext()).resizeImage(this.activity, bitmap, 100));
 
         return spinnerItem;
     }

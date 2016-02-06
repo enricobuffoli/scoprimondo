@@ -6,8 +6,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
+import android.view.View;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -17,6 +19,9 @@ import java.util.concurrent.Callable;
 import it.mattiamerlini.mvc_scoprimondo.Activities.Menu.MenuActivity;
 import it.mattiamerlini.mvc_scoprimondo.Fragments.AlertDialogFragment;
 import it.mattiamerlini.mvc_scoprimondo.Fragments.AlertMessageFragment;
+import it.mattiamerlini.mvc_scoprimondo.Fragments.ViewDialogFragment;
+import it.mattiamerlini.mvc_scoprimondo.Views.ImageSpinner.ImageSpinnerItem;
+import it.mattiamerlini.mvc_scoprimondo.Views.ImageSpinner.ImageSpinnerView;
 
 /**
  * Created by mattia on 27/01/16.
@@ -118,4 +123,35 @@ public class ActivityUtility
         msg.show(activity.getFragmentManager(), "message");
     }
 
+    public static void showViewDialog(Activity activity, ImageSpinnerView v, String positiveButton, String negativeButton, final Callable<Void> positive, final Callable<Void> negative)
+    {
+        ViewDialogFragment spinnerDialog = new ViewDialogFragment(v, positiveButton, negativeButton) {
+            @Override
+            protected void onNegativeClick(DialogInterface dialog, int which) {
+                try
+                {
+                    if(negative != null)
+                        negative.call();
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            protected void onPositiveClick(DialogInterface dialog, int which) {
+                try
+                {
+                    if(positive != null)
+                        positive.call();
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        };
+        spinnerDialog.show(activity.getFragmentManager(), "ViewDialog");
+    }
 }
