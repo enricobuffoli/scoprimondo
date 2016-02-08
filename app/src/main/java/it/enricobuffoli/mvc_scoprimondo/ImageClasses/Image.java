@@ -8,10 +8,13 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PointF;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
+
+import com.example.enrico.mvc_scoprimondo.R;
 
 
 public class Image extends ImageView {
@@ -42,7 +45,15 @@ public class Image extends ImageView {
     {
         this.drawable= String.valueOf(drawable);
         setScaleType(ScaleType.MATRIX);
+
+        //this.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.image_border));
+
+        //this.setImageBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.image_border));
+
         this.setDrawable(drawable);
+
+
+
         this.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
         imageRect= new Rectangle(this.getDrawable().getIntrinsicWidth(),this.getDrawable().getIntrinsicHeight());
         center=new PointF(this.getDrawable().getIntrinsicWidth()/2,this.getDrawable().getIntrinsicHeight()/2);
@@ -83,9 +94,13 @@ public class Image extends ImageView {
         borderBitmap = Bitmap.createBitmap(imageBitmap.getWidth() + 2 * BORDER_WIDTH,
                 imageBitmap.getHeight() + 2 * BORDER_WIDTH,
                 imageBitmap.getConfig());
+        //borderBitmap = BitmapFactory.decodeResource(this.getResources(), R.drawable.image_border);
+
         Canvas borderCanvas = new Canvas(borderBitmap);
         Paint borderPaint = new Paint();
         borderPaint.setColor(BORDER_COLOR);
+        borderPaint.setStyle(Paint.Style.STROKE);
+        borderPaint.setStrokeWidth(BORDER_WIDTH);
         borderCanvas.drawRect(0, 0, borderBitmap.getWidth(), borderBitmap.getHeight(), borderPaint);
         borderPaint = new Paint(Paint.FILTER_BITMAP_FLAG);
         borderCanvas.drawBitmap(imageBitmap, BORDER_WIDTH, BORDER_WIDTH, borderPaint);

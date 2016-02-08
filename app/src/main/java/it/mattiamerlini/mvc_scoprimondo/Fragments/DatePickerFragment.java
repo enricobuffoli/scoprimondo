@@ -18,6 +18,7 @@ public abstract class DatePickerFragment extends DialogFragment implements DateP
     public Dialog onCreateDialog(Bundle savedInstanceState)
     {
         Calendar c = Calendar.getInstance();
+        c.set(2000, 00, 01);
         int year = c.get(Calendar.YEAR);
         int month = c.get(Calendar.MONTH);
         int day = c.get(Calendar.DAY_OF_MONTH);

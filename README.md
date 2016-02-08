@@ -3,12 +3,13 @@
 
 > :+1: Dev: @enricobuffoli @mattiamerlini
 
-###ToDo List (cose da fare):
+###ToDo
 ###### @enricobuffoli
-- [ ] Nel ButtonGestureView quando è selezionata un'immagine in un livello sottostante e viene applicata una trasforzazione (es: specchio) l'applicazione crasha.
-- [ ] Nel ButtonGestureView quando non c'è nessuna immagine scompare il canvas.
-- [ ] Nel ButtonGestureView, selezionando un'immagine PNG il canale alpha diventa tutto rosso.
-- [ ] Controllare che non ci siano abusi di memoria nel `Bitmap.decodeResorces()`.
+- [ ] Dopo una rotazione di più di 180° e diverse specchiatura, la specchiatura rende inutilizzabile l'immagine. Problema del centro della simmetria.
+- [X] Nel ButtonGestureView quando è selezionata un'immagine in un livello sottostante e viene applicata una trasforzazione (es: specchio) l'applicazione crasha.
+- [X] Nel ButtonGestureView quando non c'è nessuna immagine scompare il canvas.
+- [X] Nel ButtonGestureView, selezionando un'immagine PNG il canale alpha diventa tutto rosso.
+- [X] ~~Controllare che non ci siano abusi di memoria nel `Bitmap.decodeResorces()`.~~ Succedono solo su SmartPhone, su Tablet tutto ok.
 - [X] Sistemare le dimensioni del ButtonGestureView e dell'ImageMotionView in modo da avere un 30/70 di spazio percentuale.
 - [X] Impostare le dimensioni dei pulsanti nel ButtonGestureView.
 - [X] Modificare la classe ButtonGesture e ImageMotion per permetterne la replicazione (ne servono 5). Legare l'ImageMotion al ButtonGesture tramite codice, in modo da non dipendere staticamente dall'XML.
@@ -105,5 +106,5 @@ private boolean isButtonGestureViewWellFormed(int tabIndex)
 - [X] Creare l'Alert per lo Spinner.
 
 ###### @enricobuffoli + @mattiamerlini
-- [ ] Inserire le giuste immagini nei 5 ButtonGestureView.
-- [ ] Test vari.
+- [X] ~~Inserire le giuste immagini nei 5 ButtonGestureView.~~ Dopo la verbalizzazione.
+- [X] Test vari.

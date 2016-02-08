@@ -11,6 +11,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.text.Editable;
+import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.ViewGroup;
@@ -242,6 +243,8 @@ public class UXUtility<U>
         TextView textView = (TextView) linearLayout.getChildAt(1);
         textView.setTextColor(this.getTextColor());
         this.setTabHostIndicatorBackground(linearLayout);
+        linearLayout.getLayoutParams().width = this.context.getResources().getDisplayMetrics().widthPixels/5;
+        linearLayout.getLayoutParams().height = this.context.getResources().getDisplayMetrics().heightPixels/10;
         textView.setTypeface(this.getTypeface());
     }
 

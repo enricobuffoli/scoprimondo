@@ -1,10 +1,15 @@
 package it.enricobuffoli.mvc_scoprimondo.ImageMotion;
 
+import android.app.Activity;
 import android.view.MotionEvent;
 
 import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
+
+import it.enricobuffoli.mvc_scoprimondo.MainActivity;
+import it.mattiamerlini.mvc_scoprimondo.Base.Console.Console;
+import it.mattiamerlini.mvc_scoprimondo.Utilities.ActivityUtility;
 
 /**
  * Created by enrico on 15/01/16.
@@ -21,7 +26,7 @@ public class ImageMotionController implements Observer {
     }
     @Override
     public void update(Observable observable, Object data) {
-
+        int removeIndex=-1;
         for(ImageMotionModel.ImageState temp: imageMotionModel.getImageArray())
         {
             switch (temp.getState())
@@ -32,7 +37,7 @@ public class ImageMotionController implements Observer {
                     break;
                 case (ImageMotionModel.removed):
                     imageMotionView.removeView(temp.getImage());
-                    imageMotionModel.getImageArray().remove(imageMotionModel.getImageArray().indexOf(temp));
+                    removeIndex=imageMotionModel.getImageArray().indexOf(temp);
                     break;
                 case (ImageMotionModel.changed_pos):
                     this.bringImageToFront(imageMotionModel.getImageArray().indexOf(temp));
@@ -50,6 +55,9 @@ public class ImageMotionController implements Observer {
                     break;
             }
         }
+        if(removeIndex!=-1)
+            imageMotionModel.getImageArray().remove(removeIndex);
+        removeIndex=-1;
     }
     public void bringImageToFront(int beginIndex)
     {
@@ -74,7 +82,7 @@ public class ImageMotionController implements Observer {
         }
         catch (Exception exp)
         {
-
+            ActivityUtility.showDialogAlert((Activity) imageMotionView.getContext(), "Ops . . .", "Errore: " + exp.getMessage(), "Continua", null);
         }
     }
 

@@ -1,10 +1,14 @@
 package it.enricobuffoli.mvc_scoprimondo.ImageClasses;
 
+import android.app.Activity;
 import android.graphics.Matrix;
 import android.graphics.PointF;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
+
+import it.mattiamerlini.mvc_scoprimondo.Base.Console.Console;
+import it.mattiamerlini.mvc_scoprimondo.Utilities.ActivityUtility;
 
 public class ImageTouchListener implements OnTouchListener {
 
@@ -92,6 +96,7 @@ public class ImageTouchListener implements OnTouchListener {
                             imageRect.setRotation(angle);
 
                         } else if (lastEvent != null && event.getPointerCount() == threeTouch) {
+                            Console.log("3 dita");
                             matrix.set(savedMatrix);
                             float newDist = spacing(event);
                             float scale = (newDist / oldDist);
@@ -108,7 +113,7 @@ public class ImageTouchListener implements OnTouchListener {
         }
         catch (Exception exp)
         {
-
+            ActivityUtility.showDialogAlert((Activity) this.image.getContext(), "Ops . . .", "Errore: " + exp.getMessage(), "Continua", null);
         }
         return true;
 
@@ -130,7 +135,7 @@ public class ImageTouchListener implements OnTouchListener {
         }
         catch (Exception exp)
         {
-
+            ActivityUtility.showDialogAlert((Activity) this.image.getContext(), "Ops . . .", "Errore: " + exp.getMessage(), "Continua", null);
         }
     }
 
@@ -143,6 +148,7 @@ public class ImageTouchListener implements OnTouchListener {
         }
         catch (Exception exp)
         {
+            ActivityUtility.showDialogAlert((Activity) this.image.getContext(), "Ops . . .", "Errore: " + exp.getMessage(), "Continua", null);
             return false;
         }
     }
@@ -221,7 +227,7 @@ public class ImageTouchListener implements OnTouchListener {
         }
         catch (Exception exp)
         {
-
+            ActivityUtility.showDialogAlert((Activity) this.image.getContext(), "Ops . . .", "Errore: " + exp.getMessage(), "Continua", null);
         }
     }
 }

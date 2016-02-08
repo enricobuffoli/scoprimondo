@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -55,8 +56,6 @@ public class TabHostImpl extends TabHost
         };
         this.activity = activity;
         this.setup();
-
-        //UXUtility.getInstance(this.getContext()).setTabStripDrawable(this);
     }
 
     @Override

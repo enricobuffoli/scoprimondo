@@ -68,9 +68,9 @@
                             android:layout_gravity="center_horizontal"
                             android:id="@+id/button_gesture_tab_2">
                             <it.enricobuffoli.mvc_scoprimondo.ImageMotion.ImageMotionView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="40dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="55dp"
                                 android:layout_marginLeft="5dp"
                                 android:layout_marginRight="5dp"
                                 android:layout_marginBottom="5dp"
@@ -101,7 +101,7 @@
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight=".90">
                         <it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView
                             android:layout_width="match_parent"
@@ -109,9 +109,9 @@
                             android:layout_gravity="center_horizontal"
                             android:id="@+id/button_gesture_tab_3">
                             <it.enricobuffoli.mvc_scoprimondo.ImageMotion.ImageMotionView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="40dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="55dp"
                                 android:layout_marginLeft="5dp"
                                 android:layout_marginRight="5dp"
                                 android:layout_marginBottom="5dp"
@@ -142,7 +142,7 @@
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight=".90">
                         <it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView
                             android:layout_width="match_parent"
@@ -150,9 +150,9 @@
                             android:layout_gravity="center_horizontal"
                             android:id="@+id/button_gesture_tab_4">
                             <it.enricobuffoli.mvc_scoprimondo.ImageMotion.ImageMotionView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="40dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="55dp"
                                 android:layout_marginLeft="5dp"
                                 android:layout_marginRight="5dp"
                                 android:layout_marginBottom="5dp"
@@ -183,7 +183,7 @@
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight=".90">
                         <it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView
                             android:layout_width="match_parent"
@@ -191,9 +191,9 @@
                             android:layout_gravity="center_horizontal"
                             android:id="@+id/button_gesture_tab_5">
                             <it.enricobuffoli.mvc_scoprimondo.ImageMotion.ImageMotionView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="40dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="55dp"
                                 android:layout_marginLeft="5dp"
                                 android:layout_marginRight="5dp"
                                 android:layout_marginBottom="5dp"
@@ -224,7 +224,7 @@
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight=".90">
                         <it.enricobuffoli.mvc_scoprimondo.ButtonGesture.ButtonGestureView
                             android:layout_width="match_parent"
@@ -232,9 +232,9 @@
                             android:layout_gravity="center_horizontal"
                             android:id="@+id/button_gesture_tab_6">
                             <it.enricobuffoli.mvc_scoprimondo.ImageMotion.ImageMotionView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="40dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="55dp"
                                 android:layout_marginLeft="5dp"
                                 android:layout_marginRight="5dp"
                                 android:layout_marginBottom="5dp"

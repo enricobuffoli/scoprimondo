@@ -5,6 +5,7 @@ package it.enricobuffoli.mvc_scoprimondo.ImageMotion;
  */
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -14,6 +15,8 @@ import android.support.v4.view.MotionEventCompat;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.RelativeLayout;
+
+import it.mattiamerlini.mvc_scoprimondo.Utilities.ActivityUtility;
 
 
 public class ImageMotionView extends RelativeLayout {
@@ -63,7 +66,7 @@ public class ImageMotionView extends RelativeLayout {
         }
         catch (Exception exp)
         {
-            //(new PopupWindow(this.getContext()));
+            ActivityUtility.showDialogAlert((Activity) this.getContext(), "Ops . . .", "Errore: " + exp.getMessage(), "Continua", null);
         }
         return false;
     }
